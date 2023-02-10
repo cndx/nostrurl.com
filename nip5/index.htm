@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../favicon.ico" rel="shortcut icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>8Nostr.com | Setup NIP5 verification using Github Pages</title>
+  <meta property="og:title" content="8Nostr.com |  How to setup NIP5 verification using Github Pages" />
+  <meta name="twitter:title" content="8Nostr.com |  How to setup NIP5 verification using Github Pages" />
+  <style>
+    :root {
+      --navbar-height: 0rem;
+      --navbar-offset-top: 0px;
+      --body-offset-top: var(--navbar-height);
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://assets.land/css/default.css" />
+  <base target="_blank" />
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c65dd7d15ecfb3a23baf04543045f8b8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+  <main class="content">
+      <div class="content__breadcrumb"><a href="http://8nostr.com"><-- Back 8nostr.com Home</a></div>
+    <h1>Setup NIP5 verification using Github Pages</h1>
+<div style="max-width: 512px;">
+</div>
+<p>&quot;<a href="https://github.com/nostr-protocol/nips/blob/master/05.md">NIP5</a>: Mapping Nostr keys to DNS-based internet identifiers&quot;</p>
+<ol>
+<li>
+<p>Buy a domain 😅 如 【 <a href="https://nostrurl.com">nostrurl.com</a> 】Setup Domain DNS records to point to GitHub Pages:</p>
+<pre><code>| Type | Host           | Answer          | TTL | Priority |
+|------|----------------|-----------------|-----|----------|
+@| A    |  nostrurl.com | 185.199.108.153 | 300 |          |
+*| A    |  nostrurl.com | 185.199.109.153 | 300 |          |
+</code></pre>
+</li>
+<li>
+<p>Create a new github repo <a href="https://github.com/new"><code>github.com/new</code></a></p>
+</li>
+<li>
+<p>Create a new file <code>[YOUR-REPO]/.well-known/nostr.json</code> 如：<a href="https://github.com/cndx/nostrurl.com/blob/main/.well-known/nostr.json">nostr.json</a></p>
+</li>
+<li>
+<p>Edit <code>nostr.json</code> to reflect desired Nickname and YOUR pub key (hex format) this content:</p>
+<pre><code class="language-json">{
+  &quot;names&quot;: {
+    &quot;cndx&quot;: &quot;d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Create a new file in the root folder <code>[YOUR-REPO]/_config.yml</code> and add this line</p>
+<pre><code>include: [&quot;.well-known&quot;]
+</code></pre>
+</li>
+<li>
+<p>Navigate to github.com/[USER]/[YOUR-REPO]/settings/pages</p>
+</li>
+<li>
+<p>Under &quot;Build and deployment&quot; select &quot;Deploy from branch&quot; then below select branch &quot;Main /(root)&quot; </p>
+</li>
+<li>
+<p>Under &quot;Custom domain&quot; type your naked <code>nostrurl.com</code> (github might complain, ignore)</p>
+</li>
+<li>
+<p>Below it, check Enforce HTTPS. Sometimes this may take a few minutes to be available.</p>
+</li>
+<li>
+<p>Then head over <a href="https://iris.to/profile/edit"><code>iris.to/profile/edit</code></a> or <a href="https://astral.ninja/settings"><code>astral.ninja/settings</code></a> (or <a href="http://8nostr.com">other</a>) edit the NIP-05 Indentifier field to reflect &quot;cndx@nostrurl.com&quot; and press Save</p>
+</li>
+<li>
+<p>You are all set now, enjoy the vanity address.</p>
+</li>
+</ol>
+
+  </main>
+  <script>
+  r=100;g=160;b=100;
+		r1=r+Math.floor(Math.random()*(255-r));
+		g1=g+Math.floor(Math.random()*(255-g));
+		b1=b+Math.floor(Math.random()*(255-b));
+		r2=r+Math.floor(Math.random()*(255-r));
+		g2=g+Math.floor(Math.random()*(255-g));
+		b2=b+Math.floor(Math.random()*(255-b));
+		r3=r+Math.floor(Math.random()*(255-r));
+		g3=g+Math.floor(Math.random()*(255-g));
+		b3=b+Math.floor(Math.random()*(255-b));
+		background="white linear-gradient(120deg,rgb("+r1+", "+g1+", "+b1+"),rgb("+r2+", "+g2+", "+b2+"),rgb("+r3+","+g2+", "+b3+"))";
+	document.body.style.background=background;
+</script>
+</body>
+
+</html>
