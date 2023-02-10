@@ -1,0 +1,1 @@
+{"callback":"https://nostrurl.com/api/","maxSendable":100000000000,"minSendable":1000,"metadata":"[[\"text/plain\",\"Pay to Wallet of Satoshi user: cndx\"],[\"text/identifier\",\"cndx@walletofsatoshi.com\"]]","commentAllowed":32,"tag":"payRequest"}
