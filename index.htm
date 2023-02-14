@@ -441,18 +441,19 @@ var _hmt = _hmt || [];
 		</span>
 		<span><b>Nostrurl.com</b></span></h2>
 	</section>
-	    
+
 	<div class="container">
 		<h3>Web Clients</h3>
-		<p><a href="https://nostr-resources.com/">Resources:</a>
+		<p><a href="https://www.nostr.net/">Nostr.net </a>
+		<a href="https://nostr-resources.com/">Res </a>
 		<a href="https://www.nostr.guru/">Gateway </a>&nbsp;
 		<a href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">[●]iris.to &nbsp;</a>
-		<a href="https://astral.ninja/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Astral&nbsp;</a>
+		<span id="urls"><a href="https://astral.ninja/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Astral&nbsp;</a>
 		<a href="https://yosup.app/profile/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">Yosup&nbsp;</a>
-		<a href="https://branle.netlify.app/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">Netlify&nbsp;</a>
+		<a href="https://branle.netlify.app/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">🐦Netlify&nbsp;</a>
 		<a href="https://hamstr.to/profile/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Hamstr.to&nbsp;</a>
 		<a href="https://snort.social/p/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Snort&nbsp;</a>
-		<a href="https://nostr.band/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Nostr.band&nbsp;</a></p>
+		<a href="https://nostr.band/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Nostr.band&nbsp;</a></span></p>
 		<h3>APP Clients</h3>
 		<p><a href="https://apps.apple.com/ca/app/damus/id1628663131">iOS: Damus</a>&nbsp;&nbsp;  <a href="https://github.com/vitorpamplona/amethyst/releases/">Android: Amethyst</a> <a href="https://github.com/KoalaSat/nostros/releases">Nostros</a> <a href="https://pan.baidu.com/s/1V-TA-o4230Ypt8xqgxjqOw?pwd=doge">[云yun]</a>  &nbsp;&nbsp;&nbsp;  <a href="https://nostr.watch/relays/find#public">Watch Relays Map</a></p>
 		<h3>LN Wallets</h3>
@@ -531,17 +532,17 @@ key=key.replace("https://iris.to/#/","").replace("https://iris.to/","").replace(
 	hex_el.value = hex
 	if(key.substr(0,4)!="nsec"){
 	getaddress(hex)
-	}
-	}
+	}	
+}
 function getaddress(hex){
-
-var kwords = bech32.toWords(hex_decode(hex))
-pub=bech32.encode('npub', kwords)
-sec=bech32.encode('nsec', kwords)
+ var kwords = bech32.toWords(hex_decode(hex))
+ pub=bech32.encode('npub', kwords)
+ sec=bech32.encode('nsec', kwords)
 	var aes=new Bitcoin.Address(Bitcoin.Util.sha256ripe160(Crypto.util.hexToBytes("02"+hex)));
 	document.getElementById('even-address').value=aes+"    "+sec;
 	var aes=new Bitcoin.Address(Bitcoin.Util.sha256ripe160(Crypto.util.hexToBytes("03"+hex)));
 	document.getElementById('odd-address').value=aes+"    "+pub;
+	seturls();
 }
 
 var ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
@@ -727,5 +728,32 @@ const bech32m = getLibraryFromEncoding('bech32m');
 	document.body.style.background=background;
 </script>
 <script src="bitcoinjs-min.js"></script>
+<script>
+var url = location.search;
+if (url.indexOf("?") != -1) {
+    var str = url.substr(1);
+    strs = str.split("=")[1];
+	if(strs.substr(0,4)=="npub"){
+	  document.getElementById('damus-key').value=strs;
+	  gethex(strs);
+	}
+}
+function seturls(){
+var npub=document.getElementById('odd-address').value;
+npub=npub.split("    ")[1];
+var nhex=document.getElementById('hex-key').value;
+var url='<a href="https://iris.to/'+npub+'">🐉:[●]iris.to &nbsp;</a>';
+url=url+'<a href="https://astral.ninja/'+npub+'">Astral&nbsp;</a>';
+url=url+'<a href="https://yosup.app/profile/'+nhex+'">✌🏿Yosup&nbsp;</a>';
+url=url+'<a href="https://branle.netlify.app/'+nhex+'">🐦Netlify&nbsp;</a>';
+url=url+'<a href="https://nostr.ch/'+nhex+'">Nostr.ch&nbsp;</a>';
+url=url+'<a href="https://hamstr.to/profile/'+npub+'">Hamstr.to&nbsp;</a>';
+url=url+'<a href="https://snort.social/p/'+npub+'">Snort&nbsp;</a>';
+url=url+'<a href="https://nostr.band/'+npub+'">Nostr.band&nbsp;</a>';
+		
+document.getElementById('urls').innerHTML=url;
+}
+</script>
+
     </body>
 </html>
