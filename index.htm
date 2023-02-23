@@ -465,36 +465,54 @@ var _hmt = _hmt || [];
 		<a href="https://github.com/ZeusLN/zeus/releases">Zeus</a>&nbsp;
 		<a href="https://github.com/BlueWallet/BlueWallet/releases">BlueWallet</a>&nbsp;
 		<a href="https://walletofsatoshi.com/">WalletofSatoshi</a></p>
-		<h3>Key Converter</h3>
-			<label for="nostrurl"><a href="http://8nostr.com/nip5"><b>Nip-05 </b></a><span id="nostrln"><a href="https://nostrurl.com/nip5/">🏅</a> or <a href="lightning:cndx@getalby.com" target=_self>LN⚡UR</a><a href="https://github.com/lnurl/luds/blob/legacy/lnurl-pay.md">L</a> </span></label>
+		<h3>Converter</h3>
+			<label for="nostrurl"><a href="https://8nostr.com/nip5"><b>Nip-05 </b></a><span id="nostrln"><a href="https://nostrurl.com/nip5/">🏅</a> or <a href="lightning:cndx@getalby.com" target=_self>LN⚡UR</a><a href="https://github.com/lnurl/luds/blob/legacy/lnurl-pay.md">L</a> </span></label>
 			<script>
 			function nostrln(n){
 			var d=n.split('@');
 			var lnurl='<b>'+d[1]+'</b>/.well-known/lnurlp/<b>'+d[0]+'</b>';
-			document.getElementById('nostrln').innerHTML='<a href="https://iris.to/'+n.replace('_@','')+'">  [●]iris.io </a><a href="https://'+d[1]+'/.well-known/nostr.json?name='+d[0]+'"> 🏅nostr.json </a>  <a href="lightning:'+n+'" target=_self> &nbsp;&nbsp; LN⚡&nbsp; </a><a href="https://'+d[1]+'/.well-known/lnurlp/'+d[0]+'">'+lnurl+'</a>';
+			document.getElementById('nostrln').innerHTML='<a href="https://iris.to/'+n.replace('_@','')+'">  ☯️iris.io </a><a href="https://'+d[1]+'/.well-known/nostr.json?name='+d[0]+'"> 🏅nostr.json </a>  <a href="lightning:'+n+'" target=_self> &nbsp;&nbsp; LN⚡&nbsp; </a><a href="https://'+d[1]+'/.well-known/lnurlp/'+d[0]+'">'+lnurl+'</a>';
 			}
-			</script>
-	      <input type="text" class="u-full-width" placeholder="" onclick="nostrln(this.value);" onkeyup="nostrln(this.value);" onchange="nostrln(this.value);" value="cndx@nostrurl.com" id="nostrurl">
-	      <label for="bech32">Nostr key (<a href="http://wiccm.com/btcdv.com"><b>BtcDV</b></a>&nbsp; <a target="_self" href="https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k" onclick="var my='https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='1uwcvgs5clswpfxhm7nyfjmaeysn6us0yvjdexn9yjkv3k7zjhp2sv7rt36';document.getElementById('odd-address').value='1F3sAm6ZtwLAUnj7d38pGFxtP3RVEvtsbV    npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';return false;">0</a>
+			function nip5add(nipcom){
+			var nip=document.getElementById('nostrurl').value;
+			var ns=nip.split("@");
+			var nid=ns[0];if(nid=="")nid="cndx";
+			nid=nid+"@"+nipcom;
+			nostrln(nid);
+			document.getElementById('nostrurl').value=nid;
+			}
+			function check(){
+			var nip=document.getElementById('nostrurl').value;
+			var ns=nip.split("@");
+			var str="";
+			if(ns[0]=="cndx"||ns[0]=="_"){str=str+"请将 cndx 替换成您自己的ID\n";}
+			if(ns.length!=2){str=str+"请输入类似邮箱的正确格式 Nip-05\n";}
+			if(document.getElementById('hex-key').value==""){str=str+"请下方输入您的 npub 或者 HEX\n";}
+			if(str!=""){alert(str);return false;}
+			}
+			</script><br /><form action="https://8nostr.com/.well-known/add.php" method="post" onsubmit="return check();" target="_blank">
+	      <input name="nip05" type="text" class="u-half-width" placeholder="" onclick="nostrln(this.value);" onkeyup="nostrln(this.value);" onchange="nostrln(this.value);" style="font-size:24px;font-weight:bold" value="cndx@8nostr.com" id="nostrurl">
+		  <input type="submit" style="background-color:#800080;" value="提交申请"><a target="_self" href="https://wiccm.com" onclick="nip5add('wiccm.com');return false;">@wiccm.com</a> <a target="_self" href="https://bit.pics" onclick="nip5add('bit.pics');return false;">@bit.pics</a> <a target="_self" href="https://btc.pics" onclick="nip5add('btc.pics');return false;">@btc.pics</a> <br />
+	      <label for="bech32">Nostr key (<a href="https://wiccm.com/btcdv.com"><b>BtcDV</b></a>&nbsp; <a target="_self" href="https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k" onclick="var my='https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='1uwcvgs5clswpfxhm7nyfjmaeysn6us0yvjdexn9yjkv3k7zjhp2sv7rt36';document.getElementById('odd-address').value='1F3sAm6ZtwLAUnj7d38pGFxtP3RVEvtsbV    npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';return false;">0</a>
 		  <a target="_self" href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw" onclick="var my='https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='';return false;">MaYa</a> 
 		  <a target="_self" href="https://iris.to/npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m" onclick="var my='https://iris.to/npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m';document.getElementById('damus-key').value=my;gethex(my);return false;">Jack</a> 
 		  <a target="_self" href="https://iris.to/npub16rc5ngetcwu9a8ky2vwn9a2nh02qzs7zz3zcuzeahsacvtfwa6nsn9jcg3" onclick="var my='https://iris.to/npub16rc5ngetcwu9a8ky2vwn9a2nh02qzs7zz3zcuzeahsacvtfwa6nsn9jcg3';document.getElementById('damus-key').value=my;gethex(my);return false;">YiKe</a> 
 		  <a target="_self" href="https://iris.to/npub1v790mv8724yzwxt87xn8zv9hzpwdd2pguqusnfnevtsw58mpm6mqjkttvz" onclick="var my='https://iris.to/npub1v790mv8724yzwxt87xn8zv9hzpwdd2pguqusnfnevtsw58mpm6mqjkttvz';document.getElementById('damus-key').value=my;gethex(my);return false;">Sat</a> 
 		  <a target="_self" href="https://iris.to/npub1xwwhsp9k56dhauz6z6wh9j37jalkf6cq4dhwmus67z3vyvnkjxesf3m33n" onclick="var my='https://iris.to/npub1xwwhsp9k56dhauz6z6wh9j37jalkf6cq4dhwmus67z3vyvnkjxesf3m33n';document.getElementById('damus-key').value=my;gethex(my);return false;">V</a> 
 		  <a target="_self" href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw" onclick="var my='nsec1mk6p4f74lljsmfqpkx6h4wzanrl6ygn04nqt990xf7fn034pjehq2etxlf';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='1ANnMmXS2Cga9FSZGsFxiuVbnXYsY9SNwA ';document.getElementById('odd-address').value='npub13wq3zgncn2zahs6m077s3dh9k37w9hlpvnu8wtje34jh26lhj95qmh2tv7';return false;">Nsec</a> )</label>
-	      <input type="text" class="u-full-width" onchange="gethex(this.value)" onkeyup="gethex(this.value)" placeholder="npub... OR nsec... OR  httpsURL..." id="damus-key">
+	      <input name="npub" type="text" class="u-full-width" onchange="gethex(this.value)" onkeyup="gethex(this.value)" placeholder="npub... OR nsec... OR  httpsURL..." id="damus-key">
 
 	      <label for="bech32">HEX key</label>
-	      <input type="text" class="u-full-width" onchange="getaddress(this.value)" onkeyup="getaddress(this.value)" placeholder="" id="hex-key">
+	      <input name="hex" type="text" class="u-full-width" onchange="getaddress(this.value)" onkeyup="getaddress(this.value)" placeholder="" id="hex-key">
 	      <label for="bech32">y is EVEN 02 address & nsec</label>
 	      <input type="text" class="u-full-width" placeholder="" id="even-address">
 	      <label for="bech32">y is ODD 03 address & npub</label>
 	      <input type="text" class="u-full-width" placeholder="" id="odd-address">
-
+</form>
 	      <div>
 		      <h3>More Links</h3>
-		      <a id="profile-link" href="http://wiccm.com/btcdv.com">wiccm.com/btcdv.com</a> <a id="profile-link" href="http://idgui.com/n/#generator">idgui.com/n</a> <a id="profile-link" href="http://dogefei.com/">dogefei.com</a><br/><br/>
-			  <a id="profile-link" href="http://8nostr.com">2023 &copy; 8Nostr.com</a><a id="profile-link" href="http://btayx.com/n"> idgui.com</a>
+		      <a href="https://wiccm.com/btcdv.com">wiccm.com/btcdv.com</a> <a href="https://idgui.com/n/#generator">idgui.com/n</a> <a href="https://dogefei.com/">dogefei.com</a> <a href="https://bijingpai.com/">BiJingPai.com</a><br/><br/>
+			  <a href="https://nostrurl.com">2023 &copy; NostrURL.com</a><a href="https://btayx.com/n"> idgui.com</a>
 	      </div>
 	</div>
 <script>
