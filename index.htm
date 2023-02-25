@@ -499,7 +499,7 @@ var _hmt = _hmt || [];
 	      <label for="bech32">Nostr key (<a href="https://wiccm.com/btcdv.com"><b>BtcDV</b></a>&nbsp; <a target="_self" href="https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k" onclick="var my='https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='1uwcvgs5clswpfxhm7nyfjmaeysn6us0yvjdexn9yjkv3k7zjhp2sv7rt36';document.getElementById('odd-address').value='1F3sAm6ZtwLAUnj7d38pGFxtP3RVEvtsbV    npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';return false;">0</a>
 		  <a target="_self" href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw" onclick="var my='https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='';return false;">MaYa</a> 
 		  <a target="_self" href="https://iris.to/npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m" onclick="var my='https://iris.to/npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m';document.getElementById('damus-key').value=my;gethex(my);return false;">Jack</a> 
-		  <a target="_self" href="https://iris.to/npub16rc5ngetcwu9a8ky2vwn9a2nh02qzs7zz3zcuzeahsacvtfwa6nsn9jcg3" onclick="var my='https://iris.to/npub16rc5ngetcwu9a8ky2vwn9a2nh02qzs7zz3zcuzeahsacvtfwa6nsn9jcg3';document.getElementById('damus-key').value=my;gethex(my);return false;">YiKe</a> 
+		  <a target="_self" href="https://iris.to/ahr999.com" onclick="var my='https://iris.to/npub1xv00thmc5qr02pcrmgss8z29dnn2x9yr5nszwf0sjzfqvkvk2l2qkvwsmg';document.getElementById('damus-key').value=my;gethex(my);return false;">9</a> 
 		  <a target="_self" href="https://iris.to/npub1v790mv8724yzwxt87xn8zv9hzpwdd2pguqusnfnevtsw58mpm6mqjkttvz" onclick="var my='https://iris.to/npub1v790mv8724yzwxt87xn8zv9hzpwdd2pguqusnfnevtsw58mpm6mqjkttvz';document.getElementById('damus-key').value=my;gethex(my);return false;">Sat</a> 
 		  <a target="_self" href="https://iris.to/npub1xwwhsp9k56dhauz6z6wh9j37jalkf6cq4dhwmus67z3vyvnkjxesf3m33n" onclick="var my='https://iris.to/npub1xwwhsp9k56dhauz6z6wh9j37jalkf6cq4dhwmus67z3vyvnkjxesf3m33n';document.getElementById('damus-key').value=my;gethex(my);return false;">V</a> 
 		  <a target="_self" href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw" onclick="var my='nsec1mk6p4f74lljsmfqpkx6h4wzanrl6ygn04nqt990xf7fn034pjehq2etxlf';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='1ANnMmXS2Cga9FSZGsFxiuVbnXYsY9SNwA ';document.getElementById('odd-address').value='npub13wq3zgncn2zahs6m077s3dh9k37w9hlpvnu8wtje34jh26lhj95qmh2tv7';return false;">Nsec</a> )</label>
@@ -755,10 +755,14 @@ const bech32m = getLibraryFromEncoding('bech32m');
 var url = location.search;
 if (url.indexOf("?") != -1) {
     var str = url.substr(1);
-    strs = str.split("=")[1];
+    strscs = str.split("=");
+	strs = strscs[1];
 	if(strs.substr(0,4)=="npub"){
 	  document.getElementById('damus-key').value=strs;
 	  gethex(strs);
+	}
+	if(strscs.length>=3){
+	  document.getElementById('nostrurl').value=strscs[3];
 	}
 }
 function seturls(){
