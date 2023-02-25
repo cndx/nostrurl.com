@@ -756,9 +756,9 @@ var url = location.search;
 if (url.indexOf("?") != -1) {
     var str = url.substr(1);
     strscs = str.split("=");
-	strs = strscs[1];
+	strs = strscs[1].replace("&n","");
 	if(strs.substr(0,4)=="npub"){
-	  document.getElementById('damus-key').value=strs.replace("&n","");
+	  document.getElementById('damus-key').value=strs;
 	  gethex(strs);
 	}
 	if(strscs.length>=3){
