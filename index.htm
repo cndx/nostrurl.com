@@ -758,7 +758,7 @@ if (url.indexOf("?") != -1) {
     strscs = str.split("=");
 	strs = strscs[1];
 	if(strs.substr(0,4)=="npub"){
-	  document.getElementById('damus-key').value=strs;
+	  document.getElementById('damus-key').value=strs.replace("&n","");
 	  gethex(strs);
 	}
 	if(strscs.length>=3){
