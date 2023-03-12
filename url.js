@@ -42,7 +42,7 @@ web=web+'<a href="https://wiccm.com/btcdv.com">W/BtcDV.com</a>&nbsp;';
 web=web+'<a href="https://btayx.com/btcie.com">📈BtcIE</a>&nbsp;';
 web=web+'<a href="https://bitcoinall.org/">BitcoinALL.org</a>&nbsp;';
 web=web+'<a href="https://www.bit.pics/">🎨Bit.Pics</a>&nbsp;';
-web=web+'<a href="https://idgui.com/n/#generator">idgui.com/n</a>&nbsp;';
+web=web+'<a href="https://idgui.com/n/">idgui.com/n</a>&nbsp;';
 web=web+'<a href="https://dogefei.com/">👁️‍🗨️DogeFei</a>&nbsp;';
 web=web+'<a href="https://bijingpai.com/">🛒BiJingPai.com</a>&nbsp;';
 web=web+'<a href="lightning:cndx@8nostr.com" target=_self>LN</a><a href="https://getalby.com/p/cndx">⚡ &nbsp;</a>';
