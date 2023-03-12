@@ -1,5 +1,6 @@
 var web='<a href="https://www.nostr.net/">Nostr.net </a>';
 web=web+'<a href="https://nostr.io/">.io </a>';
+web=web+'<a href="https://nostr.info/relays/">.info </a>';
 web=web+'<a href="https://www.nostr.guru/">.guru </a>';
 web=web+'<a href="https://nostr-resources.com/">Res </a>&nbsp;';
 web=web+'<a href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">☯️iris.to &nbsp;</a>';
