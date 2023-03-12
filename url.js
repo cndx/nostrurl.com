@@ -3,6 +3,7 @@ web=web+'<a href="https://nostr.io/">.io </a>';
 web=web+'<a href="https://nostr.info/relays/">.info </a>';
 web=web+'<a href="https://www.nostr.guru/">.guru </a>';
 web=web+'<a href="https://nostr-resources.com/">Res </a>&nbsp;';
+web=web+'<a href="https://8nostr.com/relays/?Events=100&ms=3000"><b>Relays </b></a>';
 web=web+'<a href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">☯️iris.to &nbsp;</a>';
 web=web+'<a href="https://www.broadcstr.com/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Broadcstr&nbsp;</a>';
 web=web+'<span id="urls">';
