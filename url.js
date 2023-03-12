@@ -7,7 +7,7 @@ web=web+'<a href="https://www.broadcstr.com/npub16dq3qps8sgehezrylamryx5zrukmhna
 web=web+'<span id="urls">';
 web=web+'<a href="https://astral.ninja/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Astral&nbsp;</a>';
 web=web+'<a href="https://yosup.app/profile/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">Yosup&nbsp;</a>';
-web=web+'<a href="https://branle.netlify.app/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">🐦Netlify&nbsp;</a>';
+web=web+'<a href="https://web.nostrid.app/account/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">Nostrid&nbsp;</a>';
 web=web+'<a href="https://hamstr.to/profile/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Hamstr&nbsp;</a>';
 web=web+'<a href="https://snort.social/p/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Snort&nbsp;</a>';
 web=web+'<a href="https://nostr.band/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Nostr.band&nbsp;</a>';
