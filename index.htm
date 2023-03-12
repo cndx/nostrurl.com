@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Nostr url links & key converter Nostrurl.com</title>
+        <title>Nostr url links & free Nip-05 & key converter Nostrurl.com</title>
 		<link href="favicon.ico" rel="shortcut icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:title" content="Nostr">
@@ -447,33 +447,11 @@ var _hmt = _hmt || [];
 
 <div class="container">
 		<h3>Web Clients</h3>
-		<p><a href="https://www.nostr.net/">Nostr.net </a>
-		<a href="https://nostr.io/">.io </a>
-		<a href="https://www.nostr.guru/">.guru </a>
-		<a href="https://nostr-resources.com/">Res </a>&nbsp;
-		<a href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">☯️iris.to &nbsp;</a>
-		<span id="urls"><a href="https://www.broadcstr.com/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Broadcstr&nbsp;</a>
-		<a href="https://astral.ninja/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Astral&nbsp;</a>
-		<a href="https://yosup.app/profile/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">Yosup&nbsp;</a>
-		<a href="https://branle.netlify.app/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">🐦Netlify&nbsp;</a>
-		<a href="https://hamstr.to/profile/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Hamstr&nbsp;</a>
-		<a href="https://snort.social/p/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Snort&nbsp;</a>
-		<a href="https://nostr.band/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Nostr.band&nbsp;</a></span></p>
+		<p><div id="NostrWeb"></div></p>
 		<h3>APP Clients</h3>
-		<p><a href="https://apps.apple.com/ca/app/damus/id1628663131">iOS: Damus</a>&nbsp;<a href="https://testflight.apple.com/join/5xdoDCmG">test Iris</a>&nbsp;&nbsp;  <a href="https://github.com/vitorpamplona/amethyst/releases/">Android: Amethyst</a>&nbsp; <a href="https://github.com/KoalaSat/nostros/releases">Nostros</a>&nbsp;<!--<a href="https://github.com/irislib/iris-messenger/releases">Iris&nbsp;</a> --><a href="https://pan.baidu.com/s/1V-TA-o4230Ypt8xqgxjqOw?pwd=doge">[云<b>yun</b>]</a>&nbsp;&nbsp;<a href="https://nostr.watch/relays/find#public">Watch Relays Map</a></p>
+		<p><div id="NostrApp"></div></p>
 		<h3>LN Wallets</h3>
-	<p><a href="https://lightningaddress.com/">LN@</a>&nbsp;
-		<a href="https://www.lapps.co/">lapps</a>&nbsp;
-		<a href="https://www.bitrefill.com/blog/top-11-lightning-network-wallets-bitrefill/">T11</a>&nbsp;
-		<a href="https://getalby.com/">getAlby</a><a href="https://github.com/getAlby/lightning-browser-extension/releases">(Ext)</a>
-		<a href="https://pan.baidu.com/s/1V-TA-o4230Ypt8xqgxjqOw?pwd=doge"><b>[YUN]</b></a>&nbsp;
-		<a href="https://github.com/ACINQ/phoenix/releases">Phoenix</a>&nbsp;
-		<a href="https://github.com/breez/breezmobile/releases">Breez</a>&nbsp;
-		<a href="https://github.com/muun/apollo">Muun</a>&nbsp;
-		<a href="https://github.com/ZeusLN/zeus/releases">Zeus</a>&nbsp;		
-		<a href="https://github.com/BlueWallet/BlueWallet/releases">BlueWallet</a>&nbsp;
-		<a href="https://walletofsatoshi.com/">WoS</a>&nbsp;
-		<a href="https://www.bitrefill.com/thor-lightning-network-channels/?utm_source=medium&utm_medium=blog&utm_campaign=lightning-wallets">BLW</a></p>
+		<p><div id="LNlink"></div></p>
 		<h3>Converter</h3>
 			<label for="nostrurl"><a href="https://github.com/nostr-protocol/nips">Nips </a><a href="https://8nostr.com/nip5"><b>Nip-05 </b></a><span id="nostrln"><a href="https://nostrurl.com/nip5/">🏅</a> or <a href="lightning:cndx@getalby.com" target=_self>LN⚡UR</a><a href="https://github.com/lnurl/luds/blob/legacy/lnurl-pay.md">L</a> </span></label>
 			<script>
@@ -499,9 +477,10 @@ var _hmt = _hmt || [];
 			if(document.getElementById('hex-key').value==""){str=str+"请下方输入您的 npub 或者 HEX\n";}
 			if(str!=""){alert(str);return false;}
 			}
-			</script><br /><form action="https://8nostr.com/.well-known/add.php" method="post" onsubmit="return check();" target="_blank">
+			</script><br />
+<form action="https://8nostr.com/.well-known/add.php" method="post" onsubmit="return check();" target="_blank">
 	      <input name="nip05" type="text" class="u-half-width" placeholder="" onclick="nostrln(this.value);" onkeyup="nostrln(this.value);" onchange="nostrln(this.value);" style="font-size:24px;font-weight:bold" value="cndx@nostrurl.com" id="nostrurl">
-		  <input type="submit" style="background-color:#800080;height:36px;" value="提交申请"><a target="_self" href="https://ahr999.com" onclick="nip5add('ahr999.com');return false;">@ahr999.com</a> <a target="_self" href="https://vbtcv.com" onclick="nip5add('vbtcv.com');return false;">@vbtcv.com</a> <a target="_self" href="https://btc.pics" onclick="nip5add('btc.pics');return false;">@btc.pics</a><br />
+		  <input type="submit" style="background-color:#800080;height:36px;" value="提交申请"><span id="nip5adds"></span><br />
 	      <label for="bech32">Nostr key (<a href="https://wiccm.com/btcdv.com"><b>BtcDV</b></a>&nbsp; <a target="_self" href="https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k" onclick="var my='https://iris.to/npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='1uwcvgs5clswpfxhm7nyfjmaeysn6us0yvjdexn9yjkv3k7zjhp2sv7rt36';document.getElementById('odd-address').value='1F3sAm6ZtwLAUnj7d38pGFxtP3RVEvtsbV    npub15d9enu3v0yxyud4jk0pvxk3kmvrzymjpc6f0eq4ck44vr32qck7smrxq6k';return false;">0</a>
 		  <a target="_self" href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw" onclick="var my='https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='';return false;">MaYa</a> 
 		  <a target="_self" href="https://iris.to/npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m" onclick="var my='https://iris.to/npub1sg6plzptd64u62a878hep2kev88swjh3tw00gjsfl8f237lmu63q0uf63m';document.getElementById('damus-key').value=my;gethex(my);return false;">Jack</a> 
@@ -510,7 +489,6 @@ var _hmt = _hmt || [];
 		  <a target="_self" href="https://iris.to/npub1xwwhsp9k56dhauz6z6wh9j37jalkf6cq4dhwmus67z3vyvnkjxesf3m33n" onclick="var my='https://iris.to/npub1xwwhsp9k56dhauz6z6wh9j37jalkf6cq4dhwmus67z3vyvnkjxesf3m33n';document.getElementById('damus-key').value=my;gethex(my);return false;">V</a> 
 		  <a target="_self" href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw" onclick="var my='nsec1mk6p4f74lljsmfqpkx6h4wzanrl6ygn04nqt990xf7fn034pjehq2etxlf';document.getElementById('damus-key').value=my;gethex(my);document.getElementById('even-address').value='1ANnMmXS2Cga9FSZGsFxiuVbnXYsY9SNwA ';document.getElementById('odd-address').value='npub13wq3zgncn2zahs6m077s3dh9k37w9hlpvnu8wtje34jh26lhj95qmh2tv7';return false;">Nsec</a> )</label>
 	      <input name="npub" type="text" class="u-full-width" onchange="gethex(this.value)" onkeyup="gethex(this.value)" placeholder="npub... OR nsec... OR  httpsURL..." id="damus-key">
-
 	      <label for="bech32">HEX key</label>
 	      <input name="hex" type="text" class="u-full-width" onchange="getaddress(this.value)" onkeyup="getaddress(this.value)" placeholder="" id="hex-key">
 	      <label for="bech32">y is EVEN 02 address & nsec</label>
@@ -518,12 +496,12 @@ var _hmt = _hmt || [];
 	      <label for="bech32">y is ODD 03 address & npub</label>
 	      <input type="text" class="u-full-width" placeholder="" id="odd-address">
 </form>
-	      <div>
-		      <h3>More Links</h3>
-		      <a href="https://wiccm.com/btcdv.com">wiccm.com/btcdv.com</a> <a href="https://idgui.com/n/#generator">idgui.com/n</a> <a href="https://dogefei.com/">dogefei.com</a> <a href="https://bijingpai.com/">BiJingPai.com</a><br/><br/>
-			  <a href="https://nostrurl.com">2023 &copy; NostrURL.com</a><a href="https://btayx.com/n"> idgui.com</a>
-	      </div>
+		  <h3>More Links</h3>
+			  <div id="Morelink"></div><br/>
+			  <a href="https://8nostr.com/">2023 &copy; NostrURL.com</a>
+			  <a href="https://idgui.com/"> idgui.com</a><br/><br/>
 	</div>
+<script src="https://nostrurl.com/url.js"></script>
 <script>
 function hex_char(val)
 {
@@ -788,6 +766,5 @@ url=url+'<a href="https://www.broadcstr.com/'+npub+'">Broadcstr</a>';
 document.getElementById('urls').innerHTML=url;
 }
 </script>
-
     </body>
 </html>
