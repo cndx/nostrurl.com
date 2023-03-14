@@ -15,11 +15,11 @@ web=web+'<a href="https://snort.social/p/npub16dq3qps8sgehezrylamryx5zrukmhnashv
 web=web+'<a href="https://nostr.band/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Nostr.band&nbsp;</a>';
 web=web+'</span>';
 document.getElementById("NostrWeb").innerHTML=web;
-web='<a href="https://apps.apple.com/ca/app/damus/id1628663131">iOS: Damus</a>&nbsp;';
-web=web+'<a href="https://testflight.apple.com/join/5xdoDCmG">test Iris</a>';
-web=web+'<a href="https://github.com/irislib/iris-messenger/releases">&nbsp;</a>';
-web=web+'<a href="https://testflight.apple.com/join/WVoBPXE6">Plebstr</a>';
-web=web+'<a href="https://plebstr.com/#download">&nbsp;  </a>';
+web='<a href="https://github.com/irislib/iris-messenger/releases">Desktop&nbsp;</a>';
+web=web+'<a href="https://testflight.apple.com/join/5xdoDCmG">iOS: Iris</a>';
+web=web+'<a href="https://apps.apple.com/ca/app/damus/id1628663131">&nbsp;Damus&nbsp;</a>';
+web=web+'<a href="https://testflight.apple.com/join/WVoBPXE6">test Plebstr</a>';
+web=web+'<a href="https://plebstr.com/#download">&nbsp; </a>';
 web=web+'<a href="https://github.com/vitorpamplona/amethyst/releases/">Android: Amethyst</a>&nbsp;';
 web=web+'<a href="https://github.com/KoalaSat/nostros/releases">Nostros</a>&nbsp;';
 web=web+'<a href="https://pan.baidu.com/s/1V-TA-o4230Ypt8xqgxjqOw?pwd=doge">[云<b>Yun</b>]</a>&nbsp;&nbsp;';
