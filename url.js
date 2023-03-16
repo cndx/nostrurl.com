@@ -25,9 +25,10 @@ web=web+'<a href="https://github.com/KoalaSat/nostros/releases">Nostros</a>&nbsp
 web=web+'<a href="https://pan.baidu.com/s/1V-TA-o4230Ypt8xqgxjqOw?pwd=doge">[云<b>Yun</b>]</a>&nbsp;&nbsp;';
 web=web+'<a href="https://nostr.watch/relays/find#public">☯️Map</a>&nbsp;';
 web=web+'<B><a href="https://chatforai.com">Chat</a>';
-web=web+'<a href="https://94gpt.com">&nbsp;94&nbsp</a>;';
+web=web+'<a href="https://94gpt.com">&nbsp;94&nbsp</a>';
+web=web+'<a href="https://chatgpt.azurewebsites.net">web&nbsp</a></B>';
 web=web+'<a href="https://fastgpt.app">GPT</a>&nbsp;';
-web=web+'<a href="https://ai117.com">&nbsp;AI</a></B>';
+web=web+'<a href="https://ai117.com">&nbsp;AI</a>';
 document.getElementById("NostrApp").innerHTML=web;
 web='<a href="https://lightningaddress.com/">LN@</a>&nbsp;';
 web=web+'<a href="https://www.lapps.co/">Lapps</a>&nbsp;';
