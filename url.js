@@ -57,6 +57,6 @@ document.getElementById("Morelink").innerHTML=web;
 web='<a target="_self" href="https://ahr999.com" onclick="nip5add(\'ahr999.com\');return false;">@ahr999.com</a> ';
 web=web+'<a target="_self" href="https://vbtcv.com" onclick="nip5add(\'vbtcv.com\');return false;">@v₿v.com</a> ';
 web=web+'<a target="_self" href="https://btclv.com" onclick="nip5add(\'btclv.com\');return false;">@₿lv.com</a> ';
-web=web+'<a target="_self" href="https://btc.pics" onclick="nip5add(\'btc.pics\');return false;">@btc.pics</a> ';
+web=web+'<a target="_self" href="https://btc.pics" onclick="nip5add(\'btc.pics\');return false;">@₿.pics</a> ';
 web=web+'<a target="_self" href="https://bitcoinall.org" onclick="nip5add(\'bitcoinall.org\');return false;">@₿all</a>';
 document.getElementById("nip5adds").innerHTML=web;
