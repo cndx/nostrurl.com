@@ -28,7 +28,8 @@ web=web+'<B><a href="https://chatforai.com">Chat</a>';
 web=web+'<a href="https://94gpt.com">&nbsp;94&nbsp</a>';
 web=web+'<a href="https://chatgpt.azurewebsites.net">web&nbsp</a>';
 web=web+'<a href="https://fastgpt.app">GPT</a>&nbsp;';
-web=web+'<a href="https://ai117.com">&nbsp;AI</a></B>';
+web=web+'<a href="https://ai117.com">&nbsp;AI&nbsp;</a>
+web=web+'<a href="https://iris.to/note1ffnj43fn9g2m7e3cr3l57d4qcdvf5guucjeunumdztl2x76up5aqtcp96c">More</B>';
 document.getElementById("NostrApp").innerHTML=web;
 web='<a href="https://lightningaddress.com/">LN@</a>&nbsp;';
 web=web+'<a href="https://www.lapps.co/">Lapps</a>&nbsp;';
