@@ -29,7 +29,7 @@ web=web+'<B><a href="https://nostrurl.com/chat">🤖Chat</a>';
 web=web+'<a href="https://chatforai.com">&nbsp;G</a>';
 web=web+'<a href="https://94gpt.com">P</a>';
 web=web+'<a href="https://fastgpt.app">T</a>&nbsp;';
-web=web+'<a href="https://chatgpt.azurewebsites.net">web&nbsp;</a>';
+web=web+'<a href="https://chatgpts.ninvfeng.xyz/">合集&nbsp;</a>';
 web=web+'<a href="https://ai117.com">&nbsp;AI&nbsp;</a></B>';
 web=web+'<a href="https://iris.to/note1ffnj43fn9g2m7e3cr3l57d4qcdvf5guucjeunumdztl2x76up5aqtcp96c">More</a>';
 document.getElementById("NostrApp").innerHTML=web;
