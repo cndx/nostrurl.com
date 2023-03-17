@@ -50,12 +50,15 @@ var _hmt = _hmt || [];
 <input type="hidden" id="chaturls" >
 
 <Br><Br>
-特殊AI：<a href="https://fastgpt.app/">[可选GPT-4]</a> 
-<a href="https://freechatgpt.chat/">[可编辑对话]</a> 
-<a href="https://chatgpt.hswmartin.top/">[角色和发散度]</a> 
-<a href='https://trychatgp.com/'>[≡像微信]</a> 
-<a href='https://chatgpt.azurewebsites.net/'>[大输入框]</a> 
+AI：<a href="https://fastgpt.app/">[可GPT-4]</a> 
+<a href="https://freechatgpt.chat/">[编辑对话]</a> 
+<a href="https://chatgpt.hswmartin.top/">[角色发散度]</a> 
+<a href='https://trychatgp.com/'>[≡微信]</a> 
+<a href='https://chatgpt.azurewebsites.net/'>[大框]</a> 
 <a href='https://chatgpt.gengai.net/'>[小程序]</a> 
+<a href='https://chatgpt.gengai.net/'>[随机场景]</a> 
+<a href='https://www.askwhyai.xyz/'>[简]</a> 
+<a href='https://chat.geekr.cool/'>[语音]</a> 
 <Br><Br>
 <b>AI创作：</b><span onclick="hitcopy('kehuan');" id="kehuan">写一篇科幻小说</span>
 <span onclick="hitcopy('qinzi');" id="qinzi">构思个亲子游戏</span>
@@ -83,7 +86,7 @@ var _hmt = _hmt || [];
 <input type="text" onkeyup="gpt('gjdym',this.value);" onclick="gpt('gjdym',this.value);" onchange="gpt('gjdym',this.value);" class="ingpt" value="还是有钱比较好">
 <span onclick="hitcopy('gjdym');" id="gjdym"></span>
 <Br><Br>
-<b>周报生成器</b> 简单输入工作内容帮你完善成周报<Br>
+<b>周报生成器</b> 简单输入工作内容帮完善<a href="https://weeklyreport.avemaria.fun/zh">生成</a><a href="https://www.ptrain666.site/weekly_report">周报</a><Br>
 <input type="text" onkeyup="gpt('zbscq',this.value);" onclick="gpt('zbscq',this.value);" onchange="gpt('zbscq',this.value);" class="ingpt" value="1.调研需求和画像,2.上架新模版,3.宣传推广">
 <span onclick="hitcopy('zbscq');" id="zbscq"></span>
 <Br><Br>
@@ -136,22 +139,24 @@ function copy (text) {
 var u="https://chatgpts.ninvfeng.xyz/"
 //可选gpt-4.0 
 u=u+"|"+"https://trychatgp.com/"
-u=u+"|"+"https://fastgpt.app/"
-//绘图AI
+
+//绘图AI等应用
+// https://open-gpt.app/   海量的 ChatGPT 应用
+// https://harry-potter.openai-lab.com/  基于哈利波特故事情节的文字游戏。
+// https://chat-simplifier.imzbb.cc/zh   聊天简化器
 //u=u+"|"+"https://askai.ws/"  //每天仅一次机会
 //u=u+"|"+"https://chilloutai.com/"  //需登录
 
-//可选角色 
+//可选角色 场景
 u=u+"|"+"https://chatgpt.hswmartin.top/"
 u=u+"|"+"https://chat.hswmartin.top/"
+u=u+"|"+"https://qa.js.cn/"
 
 //可编辑问题
 u=u+"|"+"https://freechatgpt.chat/"
 
 //Based on OpenAI API (gpt-3.5-turbo).
-u=u+"|"+"https://chatforai.com/"
 u=u+"|"+"https://chat.bpcc.club/"
-u=u+"|"+"https://chat.xeasy.me/"
 u=u+"|"+"https://6758tkma.chattobot.xyz/"
 u=u+"|"+"https://ai.bigtear.com/"
 u=u+"|"+"https://ai.gjwa.ml/"
@@ -197,6 +202,7 @@ u=u+"|"+"https://chatgpt.acos.one/"
 u=u+"|"+"https://chatgpt.aydengen.com/"
 u=u+"|"+"https://chatgpt.canbingzt.com/"
 //u=u+"|"+"https://chatgpt.nahida520.top/" //样式新但无法思考
+//u=u+"|"+"https://vip.8eth.cc/" //样式新但无法思考
 u=u+"|"+"https://chatgpt.intdouble.com/"
 u=u+"|"+"https://chatgpt.ppt6666.com/"
 u=u+"|"+"https://chatgpt.kissopener.ml/"
@@ -210,10 +216,34 @@ u=u+"|"+"https://chatgpt123.fyi/"
 u=u+"|"+"https://chatgpt.zwhi.top/"
 u=u+"|"+"https://demo.021d.com/"
 //u=u+"|"+""
-//u=u+"|"+""
+u=u+"|"+"https://gpt.71xun.com/"
+u=u+"|"+"https://gpt.lacknb.cn/"
+u=u+"|"+"https://gpt.loongphy.com/"
+u=u+"|"+"https://gpt.openhex.cn/"
+u=u+"|"+"https://gpt.simimi.cn/"
+u=u+"|"+"https://gpt.toolkit.show/"
+u=u+"|"+"https://kang.al/"
+u=u+"|"+"https://gptplus.yongmai.xyz/"
+u=u+"|"+"https://majiangnp.top/"
+u=u+"|"+"https://newgpt3-5.chattobot.xyz/"
+u=u+"|"+"https://susu.email/"
+u=u+"|"+"https://www.021d.com/"
+u=u+"|"+"https://www.aiartchat.live/"
+u=u+"|"+"https://www.chatgpt123.fyi/"
+u=u+"|"+"https://www.dusk.chat/"
+u=u+"|"+"https://www.ecust1024.nl/"
+u=u+"|"+"https://www.ftcl.site/"
+u=u+"|"+"https://www.gptcc.cc/"
+u=u+"|"+"https://www.ptrain666.site/chatgpt"
+u=u+"|"+"https://www.qylxschool.cn/"
+u=u+"|"+"https://www.ydzykt.cn/"
+u=u+"|"+"https://chat.limy.space/"
+u=u+"|"+"https://moeyy.cn/chatgpt/"
+u=u+"|"+"https://www.ftcl.site/"
+u=u+"|"+"https://www.gptcc.cc/"
 
 //93-robot-face-2  由 OpenAI API (gpt-3.5-turbo) 和 Vercel 提供支持。
-u=u+"|"+"https://gpt.h7ml.cn/"
+//u=u+"|"+"https://gpt.h7ml.cn/"  //慢返，有访问
 //u=u+"|"+"https://www.aitoolgpt.com/?password=ourongxing"   //ourongxing
 //u=u+"|"+"https://www.chatsverse.xyz/?password=ourongxing" //网站密码ourongxing
 //u=u+"|"+"https://chat.wtko1.icu/?password=hewentao" //网站密码hewentao
@@ -230,7 +260,18 @@ u=u+"|"+"https://chatgpt.lxzh.app/"
 u=u+"|"+"https://chatgpt.sep.gay/"
 u=u+"|"+"https://chatgpt.yuexun.me/"
 //u=u+"|"+""
-//u=u+"|"+""
+u=u+"|"+"https://gpt.dofine.xyz/"
+u=u+"|"+"https://gpt.leeapps.cn/"
+u=u+"|"+"https://gpt.icepie.net/"
+u=u+"|"+"https://new.dusk.chat/"
+u=u+"|"+"https://t.chate.chat/"
+u=u+"|"+"https://www.askopenai.cn/"
+u=u+"|"+"https://www.howenbackup.top/"
+u=u+"|"+"https://www.lyuhang.top/"
+u=u+"|"+"https://www.saysome.top/"
+u=u+"|"+"https://www.askopenai.cn/"
+u=u+"|"+"https://www.howenbackup.top/"
+u=u+"|"+"https://www.ytliu.top/"
 u=u+"|"+"https://chat.gptly.net/" //有候选选择
 u=u+"|"+"https://chat.howen.ink/" //有候选选择
 u=u+"|"+"https://chatgpt.intdouble.com/"
@@ -240,15 +281,14 @@ u=u+"|"+"https://chat.417521.xyz/"
 u=u+"|"+"https://chat.feelapi.com/"
 u=u+"|"+"https://chatgpt.daysdream.one/"
 //u=u+"|"+""
-//u=u+"|"+""
+u=u+"|"+"https://nvtest.xyz/"
+
 
 
 //left list New Chat
-u=u+"|"+"https://94gpt.com/"
 u=u+"|"+"https://chat.theb.ai/"
 u=u+"|"+"https://aigcfun.com/"
 // u=u+"|"+"https://ai117.com/"  //速度太慢
-u=u+"|"+"https://chat.1kcode.com"
 u=u+"|"+"https://chat.binjie.site:7777"
 u=u+"|"+"https://chat.forchange.cn/"
 //u=u+"|"+""
@@ -256,24 +296,37 @@ u=u+"|"+"https://chat.forchange.cn/"
 
 //shu ru kuang
 u=u+"|"+"https://chatgpt.azurewebsites.net"
-u=u+"|"+"https://chat.51buygpt.com/"
 u=u+"|"+"https://chatgpt.gengai.net/ChatGPT.html"
+u=u+"|"+"https://www.aicodehelper.com/"
+u=u+"|"+"https://www.askwhyai.xyz/"  //简
+u=u+"|"+"https://www.teach-anything.com/"  //问答
+u=u+"|"+"https://chat.livepo.top/"  //微信
+u=u+"|"+"https://chat.geekr.cool/"  //语音
 
-
+//可选gpt-4.0【u=u+"|"+"https://fastgpt.app/"
+//OpenAI【u=u+"|"+"https://chatforai.com/"
+//OpenAI【u=u+"|"+"https://chat.xeasy.me/"
+//left【u=u+"|"+"https://94gpt.com/"
+//left【u=u+"|"+"https://chat.1kcode.com"
+//kuang【u=u+"|"+"https://chat.51buygpt.com/"
 urls=u.split("|");
 var k=Math.floor(Math.random()*urls.length);
 document.getElementById("chaturls").value=urls[k];
-document.getElementById("us").innerHTML=k+"/"+urls.length;
-
-var m=100;
+var allurl="";
+for(i=0;i<urls.length;i++){allurl=allurl+"<a href='"+urls[i]+"'>"+(i+1)+"</a>";}
+document.getElementById("us").innerHTML=k+"/"+urls.length+"."+allurl;
+var m=200;
 function gotourl(){
 m=m-1;
 chatu=document.getElementById("chaturls").value;
-document.getElementById("chat").innerHTML=m+"秒后转向随机的 <a href='"+chatu+"'>"+chatu+"</a>  <a href='https://chatgpts.ninvfeng.xyz/'>合集</a>";
+document.getElementById("chat").innerHTML=m+"秒后转向随机的 <a href='"+chatu+"'>"+chatu+"</a>";
+//  <a href='https://chatgpts.ninvfeng.xyz/'>合集</a>";
+if(m<0)window.location.href=chatu;
 setTimeout('gotourl()',1000);
 }
 gotourl();
 </script>
+<div id="usss"><div>
  <pre>
 模仿小红书的风格
 
