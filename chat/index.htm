@@ -30,7 +30,7 @@ position: relative; left: 1px; top: 1px; clip:rect(   )
 }
 .ingpt{
 font-size:30px;
-width:50%;
+width:62%;
 max-width:320px;
 }
 </style>
@@ -49,12 +49,42 @@ var _hmt = _hmt || [];
 <div id="chat"></div><div id="us"></div>
 <input type="hidden" id="chaturls" >
 
-<Br><Br><Br><Br>
-<h1>使用方法举例：</h1>
-1输入，2点击后面复制，3去AI粘贴询问 <a href='https://open-gpt.app/'>更多参考open-gpt.app</a><Br><Br>
+<Br><Br>
+特殊AI：<a href="https://fastgpt.app/">[可选GPT-4]</a> 
+<a href="https://freechatgpt.chat/">[可编辑对话]</a> 
+<a href="https://chatgpt.hswmartin.top/">[角色和发散度]</a> 
+<a href='https://trychatgp.com/'>[≡像微信]</a> 
+<a href='https://chatgpt.azurewebsites.net/'>[大输入框]</a> 
+<a href='https://chatgpt.gengai.net/'>[小程序]</a> 
+<Br><Br>
+<b>AI创作：</b><span onclick="hitcopy('kehuan');" id="kehuan">写一篇科幻小说</span>
+<span onclick="hitcopy('qinzi');" id="qinzi">构思个亲子游戏</span>
+<span onclick="hitcopy('kaixin');" id="kaixin">哄女朋友开心的方法</span>
+<span onclick="hitcopy('joke');" id="joke">讲十个笑话</span><Br>
+<b>有趣提问：</b><span onclick="hitcopy('shiyan');" id="shiyan">有哪些有趣的科学实验</span>
+<span onclick="hitcopy('askai');" id="askai">如何问一个让AI也答不出的问题</span>
+<span onclick="hitcopy('tidai');" id="tidai">AI会替代人类工作吗？</span><Br>
+<b>AI百科：</b><span onclick="hitcopy('howai');" id="howai">用简单的术语来解释人工智能</span>
+<span onclick="hitcopy('jdan');" id="jdan">西红柿炒鸡蛋的做法？</span>
+<span onclick="hitcopy('btc');" id="btc">BTC 是什么意思？</span><Br>
+<Br>
+<h1>高级使用方法：</h1>
+1选择输入，2点击后面复制，3去AI粘贴发送 <a href='https://open-gpt.app/'>更多参考open-gpt.app</a> <a href='https://ai-toolbox.codefuture.top/'>ai-toolbox</a><Br><Br>
+<b>智能AI翻译</b> 下拉选风格<select name="fanyi" id="fanyi">
+         <option value="下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，使用优美和高雅的表达方式。请翻译下面这句话：" selected>优雅地翻译为中文</option>
+         <option value="下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，最重要的是要简明扼要。请翻译下面这句话：">简明扼要地翻译为中文</option>
+         <option value="我希望你能担任英语翻译、拼写校对和修辞改进的角色。我会用任何语言和你交流，你会识别语言，将其翻译并用更为优美和精炼的英语回答我。请将我简单的词汇和句子替换成更为优美和高雅的表达方式，确保意思不变，但使其更具文学性。请仅回答更正和改进的部分，不要写解释。我的第一句话是：">英语优化翻译和改进者</option>
+      </select><Br>
+<input type="text" onkeyup="gpt('znfy',this.value);" onclick="gpt('znfy',this.value);" onchange="gpt('znfy',this.value);" class="ingpt" value="What is bitcoin?">
+<span onclick="hitcopy('znfy');" id="znfy"></span>
+<Br><Br>
 <b>杠精第一名</b> 什么都要杠<Br>
 <input type="text" onkeyup="gpt('gjdym',this.value);" onclick="gpt('gjdym',this.value);" onchange="gpt('gjdym',this.value);" class="ingpt" value="还是有钱比较好">
 <span onclick="hitcopy('gjdym');" id="gjdym"></span>
+<Br><Br>
+<b>周报生成器</b> 简单输入工作内容帮你完善成周报<Br>
+<input type="text" onkeyup="gpt('zbscq',this.value);" onclick="gpt('zbscq',this.value);" onchange="gpt('zbscq',this.value);" class="ingpt" value="1.调研需求和画像,2.上架新模版,3.宣传推广">
+<span onclick="hitcopy('zbscq');" id="zbscq"></span>
 <Br><Br>
 <b>回复老板</b> 用婉转的方式回复老板和提请求<Br>
 <input type="text" onkeyup="gpt('hflb',this.value);" onclick="gpt('hflb',this.value);" onchange="gpt('hflb',this.value);" class="ingpt" value="领导，我要涨工资">
@@ -76,18 +106,20 @@ var _hmt = _hmt || [];
 <script>
 function hitcopy(txts){
 var s=document.getElementById(txts).innerHTML;
-if(s.substr(0,4)!="已经复制")copy(s);
+if(s.substr(0,4)!="已复制点")copy(s);
 chatu=document.getElementById('chaturls').value;
 chatu="<a href='"+chatu+"'>【随机AI】</a>";
-document.getElementById(txts).innerHTML="已经复制,点击 "+chatu+" 粘贴询问";
+document.getElementById(txts).innerHTML="已复制点 "+chatu+" 去粘贴询问";
 }
 function gpt(gjdym,inputs){
 m=1000;
+if(gjdym=="znfy")inputs=document.getElementById("fanyi").value+inputs;
 if(gjdym=="gjdym")inputs="不需要写解释，请直接反驳下观点："+inputs;
 if(gjdym=="hflb")inputs="请婉转的方式表达："+inputs;
 if(gjdym=="hpsq")inputs="不需要解释制作方法，请直接赞美 "+inputs+" 给出好的评价";
 if(gjdym=="bnxs")inputs="请以 "+inputs+" 为主题写诗词，要写标题，不需要写解释";
 if(gjdym=="gqtj")inputs="我想让你担任歌曲推荐人。我将为您提供一首歌曲，您将创建一个包含 10 首与给定歌曲相似的歌曲的播放列表。您将为播放列表提供播放列表名称和描述。不要选择同名或同名歌手的歌曲。不要写任何解释或其他文字，只需回复播放列表名称、描述和歌曲。我的提供的一首歌是"+inputs;
+if(gjdym=="zbscq")inputs="请帮我把以下的工作内容填充为一篇完整的周报，尽量避免在回答内容中出现可能敏感的内容，用 markdown 格式以分点叙述的形式输出："+inputs;
 document.getElementById(gjdym).innerHTML=inputs;
 }
 function copy (text) {
@@ -103,32 +135,134 @@ function copy (text) {
 var u="https://chatgpts.ninvfeng.xyz/"
 //可选gpt-4.0 
 u=u+"|"+"https://trychatgp.com/"
+u=u+"|"+"https://fastgpt.app/"
+//绘图AI
+//u=u+"|"+"https://askai.ws/"  //每天仅一次机会
+//u=u+"|"+"https://chilloutai.com/"  //需登录
+
+//可选角色 
+u=u+"|"+"https://chatgpt.hswmartin.top/"
+u=u+"|"+"https://chat.hswmartin.top/"
+
+//可编辑问题
+u=u+"|"+"https://freechatgpt.chat/"
 
 //Based on OpenAI API (gpt-3.5-turbo).
 u=u+"|"+"https://chatforai.com/"
-u=u+"|"+"https://chatgpt.intdouble.com/"
-u=u+"|"+"https://chatgpt.3.com/"
+u=u+"|"+"https://chat.bpcc.club/"
 u=u+"|"+"https://chat.xeasy.me/"
+u=u+"|"+"https://6758tkma.chattobot.xyz/"
+u=u+"|"+"https://ai.bigtear.com/"
+u=u+"|"+"https://ai.gjwa.ml/"
+u=u+"|"+"https://ai.i-misaka.com/"
+u=u+"|"+"https://ai.lpsee.com/"
+// u=u+"|"+"https://ai.yougan.cc"  //有广告
+// u=u+"|"+"https://chat.yougan.cc/"  //有广告
+// u=u+"|"+"https://chat.xbdsky.cn/"  //有广告
+u=u+"|"+"https://cc.676888.xyz/"
+u=u+"|"+"https://cf.xssio.cf/"
+u=u+"|"+"https://chat.199107.xyz/"
+u=u+"|"+"https://chat.594144.xyz/"
+u=u+"|"+"https://chat.caoayu.top/"
+u=u+"|"+"https://chat.cblueu.cn/"
+u=u+"|"+"https://chat.chatgptworld.net/"
+u=u+"|"+"https://chat.aigc101.net/"
+u=u+"|"+"https://chat.feiyihe.net/"
+u=u+"|"+"https://chat.gog.one/"
+u=u+"|"+"https://chat.hcvps.cn/"
+u=u+"|"+"https://chat.icelo.cn/"
+u=u+"|"+"https://chat.isekaijoucho.moe/"
+u=u+"|"+"https://chat.laravel.icu/"
+u=u+"|"+"https://chat.kurox.cn/"
+u=u+"|"+"https://chat.kollykolly.cn/"
+u=u+"|"+"https://chat.liming.ml/"
+u=u+"|"+"https://chat.lucascool.social/"
+u=u+"|"+"https://chat.luoyangshusheng.com/"
+u=u+"|"+"https://chat.m1saka.eu.org/"
+u=u+"|"+"https://chat.milomoon.com/"
+u=u+"|"+"https://chat.nxwow.cn/"
+u=u+"|"+"https://chat.rmb.run/"
+u=u+"|"+"https://chat.rossroma.com/"
+u=u+"|"+"https://chat.tradergalax.xyz/"
+u=u+"|"+"https://chat.xssio.cf/"
+u=u+"|"+"https://chat.xixiovo.com/"
+u=u+"|"+"https://chat.zengzhe.xyz/"
+u=u+"|"+"https://chat1.osfpu.com/"
+u=u+"|"+"https://chatgpt-demo.ainetshop.com/"
+u=u+"|"+"https://chatgpt.021d.com/"
+u=u+"|"+"https://chatgpt.404name.top/"
+u=u+"|"+"https://chatgpt.930621.xyz/"
+u=u+"|"+"https://chatgpt.acos.one/"
+u=u+"|"+"https://chatgpt.aydengen.com/"
+u=u+"|"+"https://chatgpt.canbingzt.com/"
+//u=u+"|"+"https://chatgpt.nahida520.top/" //样式新但无法思考
+u=u+"|"+"https://chatgpt.intdouble.com/"
+u=u+"|"+"https://chatgpt.ppt6666.com/"
+u=u+"|"+"https://chatgpt.kissopener.ml/"
+u=u+"|"+"https://chatgpt.jellybeans.love/"
+u=u+"|"+"https://chatgpt.jaylee.cn/"
+u=u+"|"+"https://chatgpt.imzcc.com/"
+u=u+"|"+"https://chatgpt.curlybrackets.space/"
+u=u+"|"+"https://chatgpt.sometimes.cool/"
+u=u+"|"+"https://chatgpt.white-peach.ga/"
+u=u+"|"+"https://chatgpt123.fyi/"
+u=u+"|"+"https://chatgpt.zwhi.top/"
+u=u+"|"+"https://demo.021d.com/"
+//u=u+"|"+""
+//u=u+"|"+""
 
-//由 OpenAI API (gpt-3.5-turbo) 和 Vercel 提供支持。
+//93-robot-face-2  由 OpenAI API (gpt-3.5-turbo) 和 Vercel 提供支持。
 u=u+"|"+"https://gpt.h7ml.cn/"
-u=u+"|"+"https://www.aitoolgpt.com/?password=ourongxing"   //ourongxing
-u=u+"|"+"https://www.chatsverse.xyz/?password=ourongxing" //网站密码ourongxing
+//u=u+"|"+"https://www.aitoolgpt.com/?password=ourongxing"   //ourongxing
+//u=u+"|"+"https://www.chatsverse.xyz/?password=ourongxing" //网站密码ourongxing
+//u=u+"|"+"https://chat.wtko1.icu/?password=hewentao" //网站密码hewentao
+u=u+"|"+"https://chat.wxredcover.cn/" //有候选选择
+u=u+"|"+"https://chat.chlorine.site/" //有候选选择
+u=u+"|"+"https://chat.closeai.me/"
+u=u+"|"+"https://chat.locationwith.com/"
+u=u+"|"+"https://chat.qqxnas1.top/"
+u=u+"|"+"https://chat.sicer.top/"
+u=u+"|"+"https://chat.qqxnas1.top/"  //黑
+u=u+"|"+"https://chat.sicer.top/"
+u=u+"|"+"https://chat.umaske.com/"
+u=u+"|"+"https://chatgpt.lxzh.app/"
+u=u+"|"+"https://chatgpt.sep.gay/"
+u=u+"|"+"https://chatgpt.yuexun.me/"
+//u=u+"|"+""
+//u=u+"|"+""
+u=u+"|"+"https://chat.gptly.net/" //有候选选择
+u=u+"|"+"https://chat.howen.ink/" //有候选选择
 u=u+"|"+"https://chatgpt.intdouble.com/"
 u=u+"|"+"https://www.aitoolgpt.com/"
-//u=u+"|"+"https://chat.wxredcover.cn/" //无反馈
+u=u+"|"+"https://ai.wlei.cc/"
+u=u+"|"+"https://chat.417521.xyz/"
+u=u+"|"+"https://chat.feelapi.com/"
+u=u+"|"+"https://chatgpt.daysdream.one/"
+//u=u+"|"+""
+//u=u+"|"+""
 
-//list Chat
+
+//left list New Chat
+u=u+"|"+"https://94gpt.com/"
 u=u+"|"+"https://chat.theb.ai/"
 u=u+"|"+"https://aigcfun.com/"
+// u=u+"|"+"https://ai117.com/"  //速度太慢
+u=u+"|"+"https://chat.1kcode.com"
+u=u+"|"+"https://chat.binjie.site:7777"
+u=u+"|"+"https://chat.forchange.cn/"
+//u=u+"|"+""
 
-//kuang
+
+//shu ru kuang
 u=u+"|"+"https://chatgpt.azurewebsites.net"
+u=u+"|"+"https://chat.51buygpt.com/"
+u=u+"|"+"https://chatgpt.gengai.net/ChatGPT.html"
+
 
 urls=u.split("|");
 var k=Math.floor(Math.random()*urls.length);
 document.getElementById("chaturls").value=urls[k];
-document.getElementById("us").innerHTML=u;
+document.getElementById("us").innerHTML=k+"/"+urls.length;
 
 var m=100;
 function gotourl(){
@@ -139,16 +273,7 @@ setTimeout('gotourl()',1000);
 }
 gotourl();
 </script>
-更多：<a href="https://chat.wxredcover.cn/">chat.wxredcover.cn</a>
  <pre>
- 周报生成器
-
-请帮我把以下的工作内容填充为一篇完整的周报，尽量避免在回答内容中出现可能在中国是敏感的内容，用 markdown 格式以分点叙述的形式输出：
-
-抽认卡制作者
-
-我希望你能作为一个专业的抽认卡制作者，能够根据我提供的文本制作抽认卡。 制作抽认卡的说明： - 一张抽认卡包含一个问题、答案和其他细节，保持抽认卡的简单、清晰，并集中于最重要的信息。 - 确保问题是具体的、不含糊的。 - 使用清晰和简洁的语言。使用简单而直接的语言，使卡片易于阅读和理解。 - 答案应该只包含一个关键的事实/名称/概念/术语。 - 关于答案的更多信息应始终放在"细节"一栏中。 请将你制作的卡片以 markdown 表格（问题/答案/细节）的形式输出，不要有任何额外的文字。 我提供的文本是：
-
 模仿小红书的风格
 
 小红书的风格是：很吸引眼球的标题，每个段落都加 emoji, 最后加一些 tag。请用小红书风格
@@ -161,17 +286,9 @@ Linux 终端
 
 我想让你充当 Linux 终端。我将输入命令，您将回复终端应显示的内容。我希望您只在一个唯一的代码块内回复终端输出，而不是其他任何内容。不要写解释。除非我指示您这样做，否则不要键入命令。当我需要用英语告诉你一些事情时，我会把文字放在中括号内 [就像这样]。我的第一个命令是：
 
-英语翻译和改进者
+抽认卡制作者
 
-我希望你能担任英语翻译、拼写校对和修辞改进的角色。我会用任何语言和你交流，你会识别语言，将其翻译并用更为优美和精炼的英语回答我。请将我简单的词汇和句子替换成更为优美和高雅的表达方式，确保意思不变，但使其更具文学性。请仅回答更正和改进的部分，不要写解释。我的第一句话是：
-
-优雅地翻译为中文
-
-下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，使用优美和高雅的表达方式。请翻译下面这句话：
-
-简明扼要地翻译为中文
-
-下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，最重要的是要简明扼要。请翻译下面这句话：
+我希望你能作为一个专业的抽认卡制作者，能够根据我提供的文本制作抽认卡。 制作抽认卡的说明： - 一张抽认卡包含一个问题、答案和其他细节，保持抽认卡的简单、清晰，并集中于最重要的信息。 - 确保问题是具体的、不含糊的。 - 使用清晰和简洁的语言。使用简单而直接的语言，使卡片易于阅读和理解。 - 答案应该只包含一个关键的事实/名称/概念/术语。 - 关于答案的更多信息应始终放在"细节"一栏中。 请将你制作的卡片以 markdown 表格（问题/答案/细节）的形式输出，不要有任何额外的文字。 我提供的文本是：
 
 前端智能思路助手
 
@@ -617,6 +734,13 @@ Solr 搜索引擎
 
 我想让你担任歌曲推荐人。我将为您提供一首歌曲，您将创建一个包含 10 首与给定歌曲相似的歌曲的播放列表。您将为播放列表提供播放列表名称和描述。不要选择同名或同名歌手的歌曲。不要写任何解释或其他文字，只需回复播放列表名称、描述和歌曲。我的第一首歌是
 
+技术转移人
+
+我希望你能担任技术转移人的角色，我会提供简历要点，你需要将每个要点从一种技术映射到另一种技术。请以以下格式仅回复映射的要点：“- [映射后的要点]”。不要写解释。除非另有指示，否则不要提供额外的操作。当我需要提供额外的指示时，我会明确说明。
+
+校对者
+
+我需要你担任一名校对员。我会提供给你一些文本，希望你能够检查其中是否存在任何拼写、语法或标点错误。当你完成文本的校对后，请向我提供任何必要的更正或建议，以便改进这些文本。
 </pre>
 
 
