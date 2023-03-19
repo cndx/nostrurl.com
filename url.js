@@ -18,10 +18,10 @@ web=web+'<a href="https://snort.social/p/npub16dq3qps8sgehezrylamryx5zrukmhnashv
 web=web+'<a href="https://nostr.band/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">Nostr.band&nbsp;</a>';
 web=web+'</span>';
 document.getElementById("NostrWeb").innerHTML=web;
-web='<a href="https://github.com/irislib/iris-messenger/releases" title="Desktop桌面版本iris">🖥️&nbsp;</a>';
+web='<a href="https://github.com/irislib/iris-messenger/releases" title="Desktop桌面版本的iris">🖥️&nbsp;</a>';
 web=web+'<a href="https://nostr.info/relays/"><b>Relays </b></a>';
-web=web+'<a href="https://nostr.watch/relays/find#public">☯️Map</a>';
-web=web+'<a href="https://8nostr.com/relays/?Events=100&ms=3000">&nbsp;8&nbsp;</a>';
+web=web+'<a href="https://nostr.watch/relays/find#public">Map</a>';
+web=web+'<a href="https://8nostr.com/relays/?Events=100&ms=3000">&nbsp;8☯️&nbsp;</a>';
 web=web+'<a href="https://testflight.apple.com/join/5xdoDCmG">🍏Iris</a>';
 web=web+'<a href="https://apps.apple.com/ca/app/damus/id1628663131">&nbsp;Damus&nbsp;</a>';
 web=web+'<a href="https://testflight.apple.com/join/WVoBPXE6">Plebstr</a>';
