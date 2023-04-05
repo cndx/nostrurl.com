@@ -5,7 +5,20 @@
 <link rel="icon" href="favicon.svg">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        h1 {
+            color: #007bff;
+            font-family: Arial, sans-serif;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .list-group-item a {
+            color: #17a2b8;
+            font-size: 16px;
+        }
 body {
 	font-size:15px;
 	letter-spacing: 0.05em;
@@ -46,19 +59,23 @@ var _hmt = _hmt || [];
 </script>
 </head>
 <body>
+<div class="container mt-5">
 <div id="chat"></div><div id="us"></div>
 <input type="hidden" id="chaturls" >
 
-<Br><Br>
-AI：<a href="https://fastgpt.app/">[可GPT-4]</a> 
-<a href="https://freechatgpt.chat/">[编辑对话]</a> 
-<a href="https://chatgpt.hswmartin.top/">[角色发散度]</a> 
+<Br><Br><h2>
+推荐AI：<a href="https://susu.email/">[合</a><a href="https://chatgpts.ninvfeng.xyz/">集]</a> 
+<a href="https://chatgptweb.org">[GPT-4]</a>
+<a href="https://chatgptweb.org/drawai">[画</a><a href="https://chatgptfree.live/drawai">图]</a><!--<a href="https://fastgpt.app/">[GPT-4]</a> 
+<a href="https://freechatgpt.chat/">[编辑]</a> 
+<a href='https://qa.js.cn/'>[随机场景]</a> 
 <a href='https://trychatgp.com/'>[≡微信]</a> 
-<a href='https://chatgpt.azurewebsites.net/'>[大框]</a> 
-<a href='https://chatgpt.gengai.net/'>[小程序]</a> 
-<a href='https://chatgpt.gengai.net/'>[随机场景]</a> 
-<a href='https://www.askwhyai.xyz/'>[简]</a> 
 <a href='https://chat.geekr.cool/'>[语音]</a> 
+<a href='https://www.askwhyai.xyz/'>[简单]</a> -->
+<a href='https://chatgpt.azurewebsites.net/'>[大框]</a> 
+<a href='https://chatgpt.gengai.net/translate.html'>[翻译]</a> 
+<a href='https://chat.binjie.site:7777/'>[话</a><a href='https://chatgpt.52vkj.com/'>题]</a> 
+<a href='https://chatgpt.hcvps.cn/'>[D</a><a href='https://chatgpt.happycode.fun/'>E</a><a href='https://www.zzhchatgpt.com/'>M</a><a href='https://www.chatgpt-api.top/'>O]</a></h2>
 <Br><Br>
 <b>AI创作：</b><span onclick="hitcopy('kehuan');" id="kehuan">写一篇科幻小说</span>
 <span onclick="hitcopy('qinzi');" id="qinzi">构思个亲子游戏</span>
@@ -73,7 +90,7 @@ AI：<a href="https://fastgpt.app/">[可GPT-4]</a>
 <Br>
 <h1>高级使用方法：</h1>
 1选择输入，2点击后面复制，3去AI粘贴发送 <a href='https://open-gpt.app/'>更多参考open-gpt.app</a> <a href='https://ai-toolbox.codefuture.top/'>ai-toolbox</a><Br><Br>
-<b>智能AI翻译</b> 下拉选风格<select name="fanyi" id="fanyi">
+<b>智能AI翻译</b> <a href='https://chatgpt.gengai.net/translate.html'>[翻译]</a> <select name="fanyi" id="fanyi">
          <option value="下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，使用优美和高雅的表达方式。请翻译下面这句话：" selected>优雅地翻译为中文</option>
          <option value="下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，最重要的是要简明扼要。请翻译下面这句话：">简明扼要地翻译为中文</option>
          <option value="我希望你能担任英语翻译、拼写校对和修辞改进的角色。我会用任何语言和你交流，你会识别语言，将其翻译并用更为优美和精炼的英语回答我。请将我简单的词汇和句子替换成更为优美和高雅的表达方式，确保意思不变，但使其更具文学性。请仅回答更正和改进的部分，不要写解释。我的第一句话是：">优化和改进版英语</option>
@@ -86,7 +103,7 @@ AI：<a href="https://fastgpt.app/">[可GPT-4]</a>
 <input type="text" onkeyup="gpt('gjdym',this.value);" onclick="gpt('gjdym',this.value);" onchange="gpt('gjdym',this.value);" class="ingpt" value="还是有钱比较好">
 <span onclick="hitcopy('gjdym');" id="gjdym"></span>
 <Br><Br>
-<b>周报生成器</b> 简单输入工作内容帮完善<a href="https://weeklyreport.avemaria.fun/zh">生成</a><a href="https://www.ptrain666.site/weekly_report">周报</a><Br>
+<b>周报生成器</b> 简单输入工作内容帮完善<a href="https://weeklyreport.avemaria.fun/zh">生成周报</a><Br>
 <input type="text" onkeyup="gpt('zbscq',this.value);" onclick="gpt('zbscq',this.value);" onchange="gpt('zbscq',this.value);" class="ingpt" value="1.调研需求和画像,2.上架新模版,3.宣传推广">
 <span onclick="hitcopy('zbscq');" id="zbscq"></span>
 <Br><Br>
@@ -107,6 +124,18 @@ AI：<a href="https://fastgpt.app/">[可GPT-4]</a>
 <input type="text" onkeyup="gpt('gqtj',this.value);" onclick="gpt('gqtj',this.value);" onchange="gpt('gqtj',this.value);" class="ingpt" value="《孤勇者》">
 <span onclick="hitcopy('gqtj');" id="gqtj"></span>
 <Br><Br>
+<h2>ChatGPT 说明</h2>
+ <ul class="list-group" id="txtsm">
+            <li class="list-group-item"><a href="https://susu.email/" class="text-info" target="_blank">https://susu.email/</a></li>
+</ul>
+<h2>ChatGPT API Demo</h2>
+ <ul class="list-group" id="demo">
+            <li class="list-group-item"><a href="https://chatgpt.happycode.fun/" class="text-info" target="_blank">https://chatgpt.happycode.fun/</a></li>
+</ul>
+<h2>ChatGPT Web</h2>
+ <ul class="list-group" id="webs">
+            <li class="list-group-item"><a href="https://chat.gpt-nb.com/" class="text-info" target="_blank">https://chat.gpt-nb.com/</a></li>
+</ul>
 <script>
 function hitcopy(txts){
 var s=document.getElementById(txts).innerHTML;
@@ -134,27 +163,175 @@ function copy (text) {
   document.execCommand('copy')
   document.body.removeChild(el)
 }
-//聚合：https://chatgpts.ninvfeng.xyz/ 
 
-var u="https://chatgpts.ninvfeng.xyz/"
+var u="https://susu.email/?聚合Crawler爬虫收集各网址"
+u=u+"\n"+"https://chatgpts.ninvfeng.xyz/?聚合合集，会展示可用"
+u=u+"\n"+"https://weeklyreport.avemaria.fun/zh?周报生成器"
+u=u+"\n"+"https://www.chatgptweb.org/?支持GPT4版本，限次数"
+u=u+"\n"+"https://chatgptweb.org/drawai?根据描述AI画图"
+u=u+"\n"+"https://chatgptfree.live/?ChatGPT3.5Turbo"
+u=u+"\n"+"https://chatgptfree.live/drawai?根据描述AI画图"
+u=u+"\n"+"https://moeyy.cn/chatgpt/?需要输入验证码"
+u=u+"\n"+"https://chat9.binjie.site:7777/?可chat2-9换"
+u=u+"\n"+"https://chatgpt.gengai.net/?会聊天，问答，翻译，创作等"
+u=u+"\n"+"https://chatgpt.azurewebsites.net/?文本输入框"
+//u=u+"\n"+"https://www.askwhyai.xyz/?单行输入框"
+
+//ChatGPT API Demo
+u=u+"\n"+`https://chatgpt.happycode.fun/
+https://www.saysome.top/
+https://www.qylxschool.cn/
+https://gpt.71xun.com/
+https://www.ecust1024.nl/
+https://chatgpt.hcvps.cn/
+https://chatgpt.lijunyu.com/
+https://chatgpt.lyncmall.com/
+https://chatgpt.prlrr.com/
+https://chatgpt.shhengzhen.com/
+https://chatgpt.slanshi.com/
+https://chatgpt.wevein.com/
+https://chatgpt.xzintl.com/
+https://chatgpt.yiqiqq.com/
+https://www.chatgpt-api.top/
+https://www.zzhchatgpt.com/
+https://chatgpt.gezimon.xyz
+https://chatgpt.gthan.gq
+https://chatgpt.halu002.top
+https://chatgpt.happyrice.xyz
+https://chatgpt.hicloud.ga
+https://chatgpt.lins.cf
+https://chatgpt.luoluotech.cn
+https://chatgpt.mallor.xyz
+https://chatgpt.notjustcode.xyz
+https://chatgpt.oj8k.me
+https://chatgpt.peakol.xyz
+https://chatgpt.pigeonfancier.xyz
+https://chatgpt.ruoduan.cn
+https://chatgpt.spromax.top
+https://chatgpt.tyzhao.me
+https://chatgpt.wangpengli.cn
+https://chatgpt.xjfyt.top
+https://chatgpt.zhenghaoxuan.com
+https://chatgpt2.lizhe.io
+https://qzychatgpt.627353.xyz
+https://chatgpt.zzdwz.top
+https://zbwchatgpt.online
+https://yyqchatgpt.club
+https://www.zbwchatgpt.online
+https://zzhchatgpt.com/`
+
+
+//ChatGPT Web
+u=u+"\n"+`https://chat.gpt-nb.com/
+https://chat11.yqcloud.top
+https://www.howenbackup.top/
+https://chatgpt.52vkj.com/
+https://chatgpt.bdip.com/
+https://chatgpt-stagging.fancykirin.com/
+https://chatgpt.benben.ai/
+https://chatgpt.gaoajia.com/
+https://chatgpt.haoyitao.net/
+https://chatgpt.hmedu.com/
+https://chatgpt.hualianxin.com/
+https://chatgpt.kretz.cn/
+https://chatgpt.mirkoco.com/
+https://chatgpt.xiaohe.com/
+https://chatgpt.yunxuanli.com/
+https://chatgpt3.funscall.com/
+https://chatgptweb.zhuxijie.com/
+https://web.opchatgptai.com/`
+
+//ChatGPT susu.email
+u=u+"\n"+`https://susu.email/
+https://chatgpt.sklearn.cn
+https://www.chatgpt.sunhouse.co.id
+https://chat.chatgpt369.online
+https://chat.chatgptbot.win
+https://chatgpt.11j.wang
+https://chatgpt.991012.xyz
+https://chatgpt.aii.zenook.cn
+https://chatgpt.anxm.club
+https://chatgpt.fantasysk.one
+https://chatgpt.gezichenshan.top
+https://chatgpt.furuderika.cyou
+https://chatgpt.helog.cn
+https://chatgpt.hitbd.cn
+https://chatgpt.houbaolong1989.cloud
+https://chatgpt.idream.moe
+https://chatgpt.ikun99.cf
+https://chatgpt.j8080.com
+https://chatgpt.jamchu.com
+https://chatgpt.jamesflare.com
+https://chatgpt.justchen.com
+https://chatgpt.kada1120.com
+https://chatgpt.kafukeji.com
+https://chatgpt.kass.ga
+https://chatgpt.jinchengneng.com
+https://chatgpt.kkserver.ml
+https://chatgpt.kyunwl.cn
+https://chatgpt.laxiamen.cn
+https://chatgpt.lemoncat.top
+https://chatgpt.lichao.wang
+https://chatgpt.liekong1991.top
+https://chatgpt.lnluoye.com
+https://chatgpt.lservice.cn
+https://chatgpt.lsycdu.site
+https://chatgpt.main.ossrv.net
+https://chatgpt.newflyingfish.xyz
+https://chatgpt.nmslnmsl.ga
+https://chatgpt.nowtime.cc
+https://chatgpt.nzt21.tk
+https://chatgpt.orrzone.top
+https://chatgpt.raikyou.online
+https://chatgpt.riluowuhai.xyz
+https://chatgpt.saviland.com.cn
+https://chatgpt.shayuyu.cn
+https://chatgpt.sjtu.tech
+https://chatgpt.ssrspz.vip
+https://chatgpt.stegameskins.com
+https://chatgpt.sudajzapp.cn
+https://chatgpt.sunhouse.co.id
+https://chatgpt.svss.cn
+https://chatgpt.test45343.buzz
+https://chatgpt.testkkk.com
+https://chatgpt.uzio.top
+https://chatgpt.wxyqr.cn
+https://chatgpt.xavier-lam.com
+https://chatgpt.xiaojiumi.cn
+https://chatgpt.xinjiyuan2022.com
+https://chatgpt.yangge6.com
+https://chatgpt.yinfei.tk
+https://chatgpt.yurocky.com
+https://chatgpt.yxandam.top
+https://chatgpt.yxrind.top
+https://chatgpt.zcong.co
+https://chatgpt.zbiglaw.top
+https://chatgpt.yxrind.top
+https://chatgptauto.idream.moe
+https://chatgptbase.gezichenshan.top
+https://chatgptproxy.gezichenshan.top
+https://chatgptt.boxess.me
+https://chatgptweb.weixin-service.net
+https://chatopenai.0365.website
+https://jasonchatgpt.tech
+https://oliverchatgpt.xyz`
+
+/**  之前列表
 //可选gpt-4.0 
 u=u+"|"+"https://trychatgp.com/"
-
 //绘图AI等应用
 // https://open-gpt.app/   海量的 ChatGPT 应用
 // https://harry-potter.openai-lab.com/  基于哈利波特故事情节的文字游戏。
 // https://chat-simplifier.imzbb.cc/zh   聊天简化器
 //u=u+"|"+"https://askai.ws/"  //每天仅一次机会
 //u=u+"|"+"https://chilloutai.com/"  //需登录
-
+//u=u+"|"+"https://gpts.wxredcover.cn/"  //需要密码
 //可选角色 场景
 u=u+"|"+"https://chatgpt.hswmartin.top/"
 u=u+"|"+"https://chat.hswmartin.top/"
 u=u+"|"+"https://qa.js.cn/"
-
 //可编辑问题
 u=u+"|"+"https://freechatgpt.chat/"
-
 //Based on OpenAI API (gpt-3.5-turbo).
 u=u+"|"+"https://chat.bpcc.club/"
 u=u+"|"+"https://6758tkma.chattobot.xyz/"
@@ -215,7 +392,6 @@ u=u+"|"+"https://chatgpt.white-peach.ga/"
 u=u+"|"+"https://chatgpt123.fyi/"
 u=u+"|"+"https://chatgpt.zwhi.top/"
 u=u+"|"+"https://demo.021d.com/"
-//u=u+"|"+""
 u=u+"|"+"https://gpt.71xun.com/"
 u=u+"|"+"https://gpt.lacknb.cn/"
 u=u+"|"+"https://gpt.loongphy.com/"
@@ -241,7 +417,6 @@ u=u+"|"+"https://chat.limy.space/"
 u=u+"|"+"https://moeyy.cn/chatgpt/"
 u=u+"|"+"https://www.ftcl.site/"
 u=u+"|"+"https://www.gptcc.cc/"
-
 //93-robot-face-2  由 OpenAI API (gpt-3.5-turbo) 和 Vercel 提供支持。
 //u=u+"|"+"https://gpt.h7ml.cn/"  //慢返，有访问
 //u=u+"|"+"https://www.aitoolgpt.com/?password=ourongxing"   //ourongxing
@@ -270,7 +445,6 @@ u=u+"|"+"https://www.howenbackup.top/"
 u=u+"|"+"https://www.lyuhang.top/"
 u=u+"|"+"https://www.saysome.top/"
 u=u+"|"+"https://www.askopenai.cn/"
-u=u+"|"+"https://www.howenbackup.top/"
 u=u+"|"+"https://www.ytliu.top/"
 u=u+"|"+"https://chat.gptly.net/" //有候选选择
 u=u+"|"+"https://chat.howen.ink/" //有候选选择
@@ -280,21 +454,15 @@ u=u+"|"+"https://ai.wlei.cc/"
 u=u+"|"+"https://chat.417521.xyz/"
 u=u+"|"+"https://chat.feelapi.com/"
 u=u+"|"+"https://chatgpt.daysdream.one/"
-//u=u+"|"+""
 u=u+"|"+"https://nvtest.xyz/"
-
-
-
 //left list New Chat
-u=u+"|"+"https://chat.theb.ai/"
+//u=u+"|"+"https://chat.theb.ai/"
 u=u+"|"+"https://aigcfun.com/"
 // u=u+"|"+"https://ai117.com/"  //速度太慢
 u=u+"|"+"https://chat.binjie.site:7777"
 u=u+"|"+"https://chat.forchange.cn/"
-//u=u+"|"+""
-
-
 //shu ru kuang
+u=u+"|"+"https://chat.binjie.site:7777/"
 u=u+"|"+"https://chatgpt.azurewebsites.net"
 u=u+"|"+"https://chatgpt.gengai.net/ChatGPT.html"
 u=u+"|"+"https://www.aicodehelper.com/"
@@ -302,32 +470,46 @@ u=u+"|"+"https://www.askwhyai.xyz/"  //简
 u=u+"|"+"https://www.teach-anything.com/"  //问答
 u=u+"|"+"https://chat.livepo.top/"  //微信
 u=u+"|"+"https://chat.geekr.cool/"  //语音
-
 //可选gpt-4.0【u=u+"|"+"https://fastgpt.app/"
 //OpenAI【u=u+"|"+"https://chatforai.com/"
 //OpenAI【u=u+"|"+"https://chat.xeasy.me/"
 //left【u=u+"|"+"https://94gpt.com/"
 //left【u=u+"|"+"https://chat.1kcode.com"
 //kuang【u=u+"|"+"https://chat.51buygpt.com/"
-urls=u.split("|");
+**/
+urls=u.split("\n");
 var k=Math.floor(Math.random()*urls.length);
 document.getElementById("chaturls").value=urls[k];
 var allurl="";
 for(i=0;i<urls.length;i++){allurl=allurl+"<a href='"+urls[i]+"'>"+(i+1)+"</a>";}
-document.getElementById("us").innerHTML=k+"/"+urls.length+"."+allurl;
+document.getElementById("us").innerHTML=(k+1)+"/"+urls.length+"."+allurl;
+var txtsm="";var txtnum=11;
+for(i=0;i<txtnum;i++){txtsm=txtsm+'<li class="list-group-item"><a href="'+urls[i]+'" class="text-info" target="_blank">'+(i+1)+'. '+urls[i]+'</a></li>';}
+document.getElementById("txtsm").innerHTML=txtsm;
+
+var demo="";var demonum=52;
+for(i=txtnum;i<demonum;i++){demo=demo+'<li class="list-group-item"><a href="'+urls[i]+'" class="text-info" target="_blank">'+(i+1)+'. '+urls[i]+'</a></li>';}
+document.getElementById("demo").innerHTML=demo;
+
+var websli="";
+for(i=demonum;i<urls.length;i++){websli=websli+'<li class="list-group-item"><a href="'+urls[i]+'" class="text-info" target="_blank">'+(i+1)+'. '+urls[i]+'</a></li>';}
+document.getElementById("webs").innerHTML=websli;
+
 var m=200;
 function gotourl(){
 m=m-1;
 chatu=document.getElementById("chaturls").value;
 document.getElementById("chat").innerHTML=m+"秒后转向随机的 <a href='"+chatu+"'>"+chatu+"</a>";
-//  <a href='https://chatgpts.ninvfeng.xyz/'>合集</a>";
 if(m<0)window.location.href=chatu;
 setTimeout('gotourl()',1000);
 }
 gotourl();
 </script>
 <div id="usss"><div>
+
+<div id="us"></div>
  <pre>
+ 
 模仿小红书的风格
 
 小红书的风格是：很吸引眼球的标题，每个段落都加 emoji, 最后加一些 tag。请用小红书风格
@@ -797,7 +979,7 @@ Solr 搜索引擎
 我需要你担任一名校对员。我会提供给你一些文本，希望你能够检查其中是否存在任何拼写、语法或标点错误。当你完成文本的校对后，请向我提供任何必要的更正或建议，以便改进这些文本。
 </pre>
 
-
+</div>
 <script>
 r=100;g=160;b=100;
 r1=r+Math.floor(Math.random()*(255-r));
