@@ -32,11 +32,10 @@ web=web+'<a href="https://pan.baidu.com/s/1V-TA-o4230Ypt8xqgxjqOw?pwd=doge">[<b>
 web=web+'<a href="https://yiyan.baidu.com" title="百度文心一言">☮️文心</a>&nbsp;';
 web=web+'<a href="https://nostrurl.com/chat">🤖<b>Chat</b></a>';
 web=web+'<a href="https://chatgpt.gengai.net/ChatGPT-QA.html" title="可微信小程序">&nbsp;G</a>';
-web=web+'<a href="https://trychatgp.com/" title="聊天的样式">P</a>';
-web=web+'<a href="https://www.ydzykt.cn/" title="简洁快速的交流">T&nbsp;</a>';
-web=web+'<a href="https://chatgpts.ninvfeng.xyz/" title="合集找可用的">集&nbsp;</a>';
-web=web+'<a href="https://qa.js.cn/" title="随机场景">演&nbsp;</a>'; 
-web=web+'<a href="https://chat.geekr.cool/" title="可语音输入交流">语&nbsp;</a>';
+web=web+'<a href="https://chat1.binjie.site:7777" title="chat1-9">P</a>';
+web=web+'<a href="https://www.saysome.top/" title="斜线/可有模板">T&nbsp;</a>';
+web=web+'<a href="https://susu.email/">合</a><a href="https://chatgpts.ninvfeng.xyz/" title="合集找可用的">集&nbsp;</a>';
+web=web+'<a href="https://chatgptweb.org/drawai">画</a><a href="https://chatgptfree.live/drawai">图&nbsp;</a>';
 web=web+'<a href="https://open-gpt.app/" title="很多应用模板但每天次数少"><b>应</b></a>';
 web=web+'<a href="https://ai-toolbox.codefuture.top/" title="多种分类多种玩法"><b>用</b></a>';
 document.getElementById("NostrApp").innerHTML=web;
