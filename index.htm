@@ -754,7 +754,7 @@ var npub=document.getElementById('odd-address').value;
 npub=npub.split("    ")[1];
 var nhex=document.getElementById('hex-key').value;
 var url='<a href="https://iris.to/'+npub+'">🐉:[●]iris.to &nbsp;</a>';
-url=url+'<a href="https://astral.ninja/'+npub+'">Astral&nbsp;</a>';
+	//url=url+'<a href="https://astral.ninja/'+npub+'">Astral&nbsp;</a>';
 url=url+'<a href="https://yosup.app/profile/'+nhex+'">✌🏿Yosup&nbsp;</a>';
 	//url=url+'<a href="https://branle.netlify.app/'+nhex+'">🐦Netlify&nbsp;</a>';
 url=url+'<a href="https://web.nostrid.app/account/'+nhex+'">Nostrid&nbsp;</a>';
@@ -763,7 +763,7 @@ url=url+'<a href="https://hamstr.to/profile/'+npub+'">Hamstr&nbsp;</a>';
 url=url+'<a href="https://snort.social/p/'+npub+'">Snort&nbsp;</a>';
 url=url+'<a href="https://nostr.band/'+npub+'">Nostr.band&nbsp;</a>';
 url=url+'<a href="https://www.broadcstr.com/'+npub+'">Broadcstr</a>';
-		
+url=url+'<a href="https://app.coracle.social/people/'+npub+'/notes">⚛️Coracle</a>';
 document.getElementById('urls').innerHTML=url;
 }
 </script>
