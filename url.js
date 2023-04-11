@@ -1,11 +1,12 @@
-var web='<a href="https://www.nostr.net/">Nostr.net </a>';
-web=web+'<a href="https://nostr.io/">.io </a>';
+var web='<a href="https://badges.page/p/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">₿adges </a>';
+web=web+'<a href="https://www.nostr.net/">Nostr.net</a>';
+web=web+'<a href="https://nostr.io/"> </a>';
 web=web+'<a href="https://www.nostr.guru/">.guru </a>';
 web=web+'<a href="https://nostr-resources.com/">res </a>&nbsp;';
 web=web+'<a href="https://btc.pics/img/">🖼️<b>IMG</b>&nbsp;</a>';
 web=web+'<a href="https://void.cat/">🗺️Void.cat&nbsp;</a>';
-web=web+'<a href="https://postimages.org/">🐳Post&nbsp;</a>';
-web=web+'<a href="https://imgse.com/">🎨imgse&nbsp;</a>';
+web=web+'<a href="https://postimages.org/">Post&nbsp;</a>';
+web=web+'<a href="https://imgse.com/">imgse&nbsp;</a>';
 web=web+'<a href="https://www.hd-r.cn/">hd-r&nbsp;</a>';
 web=web+'<a href="https://iris.to/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw">☯️iris.to &nbsp;</a>';
 web=web+'<a href="https://app.coracle.social/people/npub16dq3qps8sgehezrylamryx5zrukmhnashvecvjcucjr3927cf2qqd8evcw/notes">⚛️Coracle&nbsp;</a>';
