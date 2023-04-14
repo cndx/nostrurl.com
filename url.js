@@ -1,5 +1,5 @@
 var web='<a href="https://badges.page/p/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">₿adges </a>';
-web=web+'<a href="https://www.nostr.net/">Nostr.net</a>';
+web=web+'<a href="https://www.nostr.net/">N.net</a>';
 web=web+'<a href="https://nostr.io/"> </a>';
 web=web+'<a href="https://www.nostr.guru/">.guru </a>';
 web=web+'<a href="https://nostr-resources.com/">res </a>&nbsp;';
@@ -24,9 +24,9 @@ web='<a href="https://github.com/irislib/iris-messenger/releases" title="Desktop
 web=web+'<a href="https://nostr.info/relays/"><b>Relays </b></a>';
 web=web+'<a href="https://nostr.watch/relays/find#public">Map</a>';
 web=web+'<a href="https://8nostr.com/relays/?Events=100&ms=3000">&nbsp;8☯️&nbsp;</a>';
-web=web+'<a href="https://testflight.apple.com/join/5xdoDCmG">🍏Iris</a>';
-web=web+'<a href="https://apps.apple.com/ca/app/damus/id1628663131">&nbsp;Damus&nbsp;</a>';
+web=web+'<a href="https://apps.apple.com/ca/app/damus/id1628663131">🍏Damus&nbsp;</a>';
 web=web+'<a href="https://testflight.apple.com/join/kvGz47De">Nostrmo</a>';
+web=web+'<a href="https://testflight.apple.com/join/5xdoDCmG" title="Iris">&nbsp;</a>';
 web=web+'<a href="https://testflight.apple.com/join/WVoBPXE6">Plebstr</a>';
 web=web+'<a href="https://plebstr.com/#download">&nbsp; </a>';
 web=web+'<a href="https://github.com/vitorpamplona/amethyst/releases/">📱Amethyst</a>&nbsp;';
@@ -39,8 +39,8 @@ web=web+'<a href="https://chatgpt.gengai.net/ChatGPT-QA.html" title="gengai">&nb
 web=web+'<a href="https://chat1.binjie.site:7777" title="chat1-9">P</a>';
 web=web+'<a href="https://chatgpt.52vkj.com/" title="52vkj">T&nbsp;</a>';
 web=web+'<a href="https://iris.to/npub1tsgw6pncspg4d5u778hk63s3pls70evs4czfsmx0fzap9xwt203qtkhtk4" title="GPT3">3&nbsp;</a>';
-web=web+'<a href="https://susu.email/">合</a><a href="https://chatgpts.ninvfeng.xyz/" title="合集找可用的">集&nbsp;</a>';
-web=web+'<a href="https://open-gpt.app/" title="很多应用模板但每天次数少">应</a>';
+web=web+'<a href="https://susu.email/">合</a><a href="https://chatgpts.ninvfeng.xyz/" title="合集找可用的">集</a>';
+//web=web+'<a href="https://open-gpt.app/" title="很多应用模板但每天次数少">应</a>';
 web=web+'<a href="https://ai-toolbox.codefuture.top/" title="多种分类多种玩法">用</a>';
 document.getElementById("NostrApp").innerHTML=web;
 web='<a href="https://lightningaddress.com/">LN@</a>&nbsp;';
