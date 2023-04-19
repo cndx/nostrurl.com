@@ -37,7 +37,7 @@ web=web+'<a href="https://tongyi.aliyun.com" title="阿里通义千问">通义</
 web=web+'<a href="https://nostrurl.com/chat">🤖<b>Chat</b></a>';
 web=web+'<a href="https://chatgpt.gengai.net/ChatGPT-QA.html" title="gengai">&nbsp;G</a>';
 web=web+'<a href="https://chat1.binjie.site:7777" title="chat1-9">P</a>';
-web=web+'<a href="https://chatgpt.52vkj.com/" title="52vkj">T&nbsp;</a>';
+web=web+'<a href="https://chatgpt.ffkey.com/" title="ffkey">T&nbsp;</a>';
 web=web+'<a href="https://iris.to/npub1tsgw6pncspg4d5u778hk63s3pls70evs4czfsmx0fzap9xwt203qtkhtk4" title="GPT3">3&nbsp;</a>';
 web=web+'<a href="https://susu.email/">合</a><a href="https://chatgpts.ninvfeng.xyz/" title="合集找可用的">集</a>';
 //web=web+'<a href="https://open-gpt.app/" title="很多应用模板但每天次数少">应</a>';
@@ -58,7 +58,7 @@ web=web+'<a href="https://www.bitrefill.com/thor-lightning-network-channels/?utm
 web=web+'<a href="https://walletofsatoshi.com/">&nbsp;WoS</a>';
 document.getElementById("LNlink").innerHTML=web;
 web='<a href="https://ahr999.com">9️⃣ahr999.com</a>&nbsp;';
-web=web+'<a href="https://wiccm.com/btcdv.com">W/BtcDV.com</a>&nbsp;';
+web=web+'<a href="https://btcdv.com">BtcDV.com</a>&nbsp;';
 web=web+'<a href="https://btayx.com/btcie.com">📈BtcIE</a>&nbsp;';
 web=web+'<a href="https://bitcoinall.org/">BitcoinALL.org</a>&nbsp;';
 web=web+'<a href="https://www.bit.pics/">🎨Bit.Pics</a>&nbsp;';
