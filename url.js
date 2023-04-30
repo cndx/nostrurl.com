@@ -1,7 +1,7 @@
 var web='<a href="https://badges.page/p/d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80">₿adges </a>';
-web=web+'<a href="https://www.nostr.net/">N.net</a>';
+web=web+'<a href="https://www.nostr.net/">.net</a>';
 web=web+'<a href="https://nostr.io/"> </a>';
-web=web+'<a href="https://www.nostr.guru/">.guru </a>';
+web=web+'<a href="https://www.nostr.guru/"><b>.guru</b> </a>';
 web=web+'<a href="https://nostr-resources.com/">res </a>&nbsp;';
 web=web+'<a href="https://btc.pics/img/">🖼️<b>IMG</b>&nbsp;</a>';
 web=web+'<a href="https://void.cat/">🗺️VoidCat&nbsp;</a>';
@@ -29,6 +29,7 @@ web=web+'<a href="https://testflight.apple.com/join/5xdoDCmG" title="Iris">&nbsp
 web=web+'<a href="https://testflight.apple.com/join/WVoBPXE6">Plebstr</a>';
 web=web+'<a href="https://plebstr.com/#download">&nbsp; </a>';
 web=web+'<a href="https://github.com/vitorpamplona/amethyst/releases/">📱Amethyst</a>&nbsp;';
+web=web+'<a href="https://nostrmo.com/releases/1_4_3/app-release.apk">Nostrmo</a>';
 web=web+'<a href="https://github.com/KoalaSat/nostros/releases">Nostros</a>&nbsp;';
 web=web+'<a href="https://pan.baidu.com/s/1V-TA-o4230Ypt8xqgxjqOw?pwd=doge">[<b>Yun</b>]</a>&nbsp;';
 web=web+'<a href="https://yiyan.baidu.com" title="百度文心一言">☮️文心</a>&nbsp;';
