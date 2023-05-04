@@ -458,17 +458,19 @@ var _hmt = _hmt || [];
 	var npubxxx=document.getElementById('nxxx').value;
 	if(npubxxx==npubxxx.replace("@",""))ats="";
 	var urls="";
+	var k=0;
 		for(i=0;i<h.length;i++){
 		var pb=h[i];
 		if(pb.length>50 && pb.length<80){
 		pb=hex2npub(pb);
 		npubs=npubs+"\n"+ats+pb;
 		if(pb.length==63){
-		urls=urls+"\n <br><a title='徽章' href='https://badges.page/p/"+h[i]+"'>"+(i+1)+".₿adges</a>";
+			k++;
+		urls=urls+"\n <br><a title='徽章' href='https://badges.page/p/"+h[i]+"'>"+k+".₿adges</a>";
 		urls=urls+"<a title='' href='https://nostr.band/"+pb+"'> Ba</a>";
 		urls=urls+"<a title='' href='https://nostr.band/?q="+pb+"'>nd</a>";
 		urls=urls+"<a title='' href='https://flycat.club/zh/user/"+h[i]+"'> Flycat</a>";
-		urls=urls+"<a title='"+(i+1)+" "+h[i]+"' href='https://iris.to/"+pb+"'> ☯️"+pb+"</a>";
+		urls=urls+"<a title='【"+(i+1)+"】 "+h[i]+"' href='https://iris.to/"+pb+"'> ☯️"+pb+"</a>";
 		}
 		}
 		}
