@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Nostr url links & key converter 8Nostr.com</title>
-		<link href="https://8nostr.com/8nostr.com/favicon.ico" rel="shortcut icon" />
+        <title>Nostr url links & key converter NostrURL.com</title>
+		<link href="https://nostrurl.com/favicon.ico" rel="shortcut icon" />
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <meta property="og:title" content="Nostr">
         <meta property="og:description" content="A new social network that you control">
@@ -440,14 +440,14 @@ var _hmt = _hmt || [];
     <body>
 	<section class="header" style="background-color:white">
 		<h2><span class="logo">
-			&nbsp;&nbsp;<img src="https://8nostr.com/8nostr.com/logo.jpg" width="40" />
+			&nbsp;&nbsp;<img src="https://nostrurl.com/logo.jpg" width="40" />
 		</span>
-		<span><b>HEX批量转 8Nostr.com</b></span></h2>
+		<span><b>NostrURL.com/HEX2npub</b></span></h2>
 	</section>
 
 	<div class="container">
 	<textarea style="width:100%" placeholder="可回车或空格输入多个HEX ： d34110060782337c8864ff76321a821f2dbbcfb0bb33864b1cc48712abd84a80"  id="hexs" onchange="getnpubs(this.value)" onkeyup="getnpubs(this.value)"></textarea>
-	<input style="width:17%; float:left;font-size:26px;" id="nxxx" value="@npub"></input><textarea style="width:80%" placeholder="默认@npub，可改为npub或其它如nsec,note" id="npubs"></textarea>
+	<input style="width:17%; float:left;font-size:26px;" id="nxxx" value="@npub"></input><textarea style="width:80%" placeholder="默认@npub，可改为npub或其它如nsec,note,bc" id="npubs"></textarea>
 	<div id="irisurl"></div>
 	<script>
 	function getnpubs(hexs){
@@ -773,7 +773,7 @@ const bech32m = getLibraryFromEncoding('bech32m');
 		background="white linear-gradient(120deg,rgb("+r1+", "+g1+", "+b1+"),rgb("+r2+", "+g2+", "+b2+"),rgb("+r3+","+g2+", "+b3+"))";
 	document.body.style.background=background;
 </script>
-<script src="https://8nostr.com/8nostr.com/bitcoinjs-min.js"></script>
+<script src="https://nostrurl.com/bitcoinjs-min.js"></script>
 <script>
 var url = location.search;
 if (url.indexOf("?") != -1) {
